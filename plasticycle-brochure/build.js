@@ -171,6 +171,7 @@ secciones.forEach((s, i) => {
     <div class="body">
       ${s.descripcion ? `<p class="desc">${esc(s.descripcion)}</p>` : cont ? '' : pendiente('Descripción del servicio')}
       ${(s.destacados || []).length ? `<div class="badges">${s.destacados.map((d) => `<span class="badge">${icon('check')}${esc(d)}</span>`).join('')}</div>` : ''}
+      ${(s.pasos || []).length ? `<div class="steps">${s.pasos.map((t, k) => `<div class="step"><span>${k + 1}</span>${esc(t)}</div>`).join('')}</div>` : ''}
       ${bloques ? `<div class="blks">${bloques}</div>` : ''}
       ${items || (cont ? '' : pendiente('Productos / variantes del servicio'))}
       ${lista}

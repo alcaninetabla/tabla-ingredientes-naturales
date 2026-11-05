@@ -31,7 +31,7 @@
       "titulo": "Compra de scrap",
       "subtitulo": "Compramos tus residuos industriales",
       "icono": "recycle",
-      "descripcion": "",
+      "descripcion": "Compramos tu scrap de forma responsable: nunca enviamos nada a rellenos. Te ayudamos a evitar impacto ambiental, gastos de disposición y manifiestos, mientras creamos cultura de reciclaje con nuestros procesos de reúso.",
       "items": [
         {
           "nombre": "Plásticos",
@@ -54,7 +54,22 @@
           "ilustracion": "metales"
         }
       ],
-      "destacados": []
+      "destacados": [],
+      "pasos": [
+        "Cotizamos el material",
+        "Definimos el plan de logística",
+        "Te hacemos una propuesta de compra"
+      ],
+      "lista": {
+        "titulo": "Beneficios para tu empresa",
+        "items": [
+          "Evitas crear impacto ambiental.",
+          "Evitas gastos de disposición y manifiestos.",
+          "Compra-venta sin reclasificar los materiales como scrap; solo se ajusta su valor para facturar.",
+          "Cultura de reciclaje mediante nuestros procesos de reúso.",
+          "Mejoras tu imagen empresarial."
+        ]
+      }
     },
     {
       "id": "tarimas",
@@ -269,9 +284,9 @@
     {
       "id": "ecommerce",
       "titulo": "Compras en e-commerce",
-      "subtitulo": "Compramos por ti en plataformas en línea",
+      "subtitulo": "Compramos por tu empresa en plataformas en línea",
       "icono": "cart",
-      "descripcion": "",
+      "descripcion": "Para empresas que, por sus procesos internos y operativos, no pueden simplemente comprar en Amazon u otras plataformas: nosotros hacemos el pedido, lo entregamos y facturamos a tu empresa, trasladando únicamente el IVA de la operación de compra-venta.",
       "items": [
         {
           "nombre": "Amazon",
@@ -286,7 +301,15 @@
           "detalle": ""
         }
       ],
-      "destacados": []
+      "destacados": [
+        "Factura a nombre de tu empresa",
+        "Solo se traslada el IVA de la operación"
+      ],
+      "pasos": [
+        "Hacemos el pedido por ti",
+        "Lo entregamos en tu empresa",
+        "Facturamos a tu empresa"
+      ]
     },
     {
       "id": "transporte",
@@ -309,10 +332,27 @@
     {
       "id": "almacen",
       "titulo": "Renta de espacio en almacén",
-      "subtitulo": "Almacén de logística",
+      "subtitulo": "Almacén de logística en León, Gto.",
       "icono": "warehouse",
-      "descripcion": "",
-      "items": [],
+      "descripcion": "En alianza con un operador logístico especializado, ofrecemos espacio de almacén y servicios de logística para empresas de cualquier tamaño.",
+      "items": [
+        {
+          "nombre": "Almacenaje",
+          "detalle": "Control de temperatura y racks especializados"
+        },
+        {
+          "nombre": "Depósito fiscal",
+          "detalle": "Importación y resguardo de mercancía hasta por 24 meses"
+        },
+        {
+          "nombre": "Servicios de valor agregado",
+          "detalle": "Paletizado, flejado y empaque"
+        },
+        {
+          "nombre": "Gestión de inventario",
+          "detalle": ""
+        }
+      ],
       "destacados": []
     },
     {
