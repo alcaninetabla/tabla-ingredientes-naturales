@@ -9,7 +9,7 @@ const ilus = require('./ilustraciones');
 const DIR = __dirname;
 const BORRADOR = process.argv.includes('--borrador');
 const data = JSON.parse(fs.readFileSync(path.join(DIR, 'content.json'), 'utf8'));
-const { empresa, contacto, secciones } = data;
+const { empresa, contacto, secciones, modelo } = data;
 
 const esc = (s = '') =>
   String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -89,7 +89,7 @@ const numDe = (s) => enIndice.indexOf(s) + 1;
 const pad = (n) => String(n).padStart(2, '0');
 
 const pages = [];
-const total = secciones.length + 3;
+const total = secciones.length + 4;
 
 function footer(n, prevId, nextId) {
   return `<footer class="foot">
@@ -107,14 +107,35 @@ pages.push(`<section class="page cover" id="portada">
   <div class="cover-bg"></div>
   <div class="cover-in">
     ${brand('big')}
-    <h1>Soluciones integrales de reciclaje,<br>empaque y servicios industriales</h1>
+    <h1>${esc(empresa.titular || 'Soluciones integrales para la industria')}</h1>
     ${empresa.lema ? `<p class="lema">${esc(empresa.lema)}</p>` : pendiente('Lema / frase de la empresa')}
     <div class="chips">${enIndice.map((s) => `<a href="#${s.id}" class="chip">${esc(s.titulo)}</a>`).join('')}</div>
-    <a class="cta big" href="#indice">Ver servicios ${icon('arrow')}</a>
+    <div class="ctas"><a class="cta big" href="#modelo">Conoce nuestro modelo ${icon('arrow')}</a><a class="cta big ghost" href="#indice">Ver servicios</a></div>
   </div>
 </section>`);
 
-// 2. Índice
+// 2. Modelo integrador
+const sumarseHref = contacto.whatsapp
+  ? `https://wa.me/${intl(contacto.whatsapp)}?text=${encodeURIComponent(`Hola ${empresa.nombre}, soy proveedor local y me interesa sumarme a su red.`)}`
+  : '#contacto';
+pages.push(`<section class="page modelo" id="modelo">
+  <header class="ph"><span class="kicker">Modelo integrador</span><h2>${esc(modelo.titulo)}</h2></header>
+  <p class="intro">${esc(modelo.intro)}</p>
+  <div class="flow">${modelo.flujo
+    .map((f, k) => `<div class="fnode ${k === 1 ? 'hub' : ''}">${k === 1 && iconoSrc ? `<img src="${iconoSrc}" alt="">` : ''}<b>${esc(f.titulo)}</b><span>${esc(f.texto)}</span></div>`)
+    .join(`<div class="farrow">${icon('arrow')}</div>`)}</div>
+  <h3 class="gt">Lo que gana tu área de compras</h3>
+  <div class="bens">${modelo.beneficios
+    .map((b) => `<div class="ben"><span class="bi">${icon(b.icono)}</span><b>${esc(b.titulo)}</b><p>${esc(b.texto)}</p></div>`)
+    .join('')}</div>
+  <div class="ally">
+    <div><h3>${esc(modelo.aliados.titulo)}</h3><p>${esc(modelo.aliados.texto)}</p></div>
+    <a class="cta" href="${esc(sumarseHref)}">${icon('wa')} ${esc(modelo.aliados.cta)}</a>
+  </div>
+  ${footer(2, 'portada', 'indice')}
+</section>`);
+
+// 3. Índice
 pages.push(`<section class="page index" id="indice">
   <header class="ph"><h2>Nuestros servicios</h2><p>Toca cualquier servicio para ir directo a su sección.</p></header>
   ${empresa.descripcion ? `<p class="about">${esc(empresa.descripcion)}</p>` : pendiente('Descripción breve de la empresa (quiénes somos)')}
@@ -131,12 +152,12 @@ pages.push(`<section class="page index" id="indice">
       .join('')}
   </div>
   <a class="cta" href="#contacto">${icon('phone')} Contáctanos</a>
-  ${footer(2, 'portada', secciones[0].id)}
+  ${footer(3, 'modelo', secciones[0].id)}
 </section>`);
 
 // 3..n Secciones
 secciones.forEach((s, i) => {
-  const n = i + 3;
+  const n = i + 4;
   const prev = i === 0 ? 'indice' : secciones[i - 1].id;
   const next = i === secciones.length - 1 ? 'contacto' : secciones[i + 1].id;
   const foto = img(s.imagen);

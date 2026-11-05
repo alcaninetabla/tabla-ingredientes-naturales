@@ -3,10 +3,11 @@
     "nombre": "PlastiCycle BJX",
     "razonSocial": "PLASTICYCLE BJX S.A. DE C.V.",
     "rfc": "PBJ2302176XA",
-    "lema": "",
-    "descripcion": "Somos una empresa integradora creada para dar soluciones a la industria en general en el Bajío. Nuestra red de proveedores locales certificados acerca el talento local a las grandes empresas.",
+    "lema": "Empresa integradora de soluciones industriales en el Bajío: reciclaje, empaque, insumos, logística y servicios, con un solo punto de contacto.",
+    "descripcion": "Somos una empresa integradora creada para dar soluciones a la industria del Bajío. A través de nuestra red de proveedores locales certificados y alianzas estratégicas, concentramos en una sola relación comercial lo que tu empresa hoy compra a muchos.",
     "logoIcono": "assets/logo-icono.png",
-    "logo": ""
+    "logo": "",
+    "titular": "Un solo proveedor para todo lo que tu planta necesita"
   },
   "contacto": {
     "whatsapp": "479 221 4882",
@@ -24,6 +25,61 @@
       }
     ],
     "horario": ""
+  },
+  "modelo": {
+    "titulo": "Un solo proveedor. Toda una red trabajando para tu empresa.",
+    "intro": "Comprar insumos y servicios para una planta implica dar de alta, evaluar y coordinar a decenas de proveedores. Como empresa integradora, nosotros hacemos ese trabajo: tu área de compras trata con un solo proveedor y nosotros coordinamos a nuestra red de fabricantes, especialistas y aliados de la región.",
+    "flujo": [
+      {
+        "titulo": "Tu empresa",
+        "texto": "Una solicitud, una orden de compra, un contacto"
+      },
+      {
+        "titulo": "PlastiCycle BJX",
+        "texto": "Cotizamos, coordinamos, entregamos y facturamos"
+      },
+      {
+        "titulo": "Nuestra red",
+        "texto": "Proveedores locales certificados y aliados estratégicos"
+      }
+    ],
+    "beneficios": [
+      {
+        "icono": "check",
+        "titulo": "Un solo alta de proveedor",
+        "texto": "Evitas registrar, evaluar y dar seguimiento a múltiples proveedores."
+      },
+      {
+        "icono": "phone",
+        "titulo": "Un solo punto de contacto",
+        "texto": "Cotizaciones, pedidos y entregas de varias categorías con un mismo equipo."
+      },
+      {
+        "icono": "box",
+        "titulo": "Documentación en orden",
+        "texto": "Una relación comercial formal, con facturación y documentación en regla."
+      },
+      {
+        "icono": "truck",
+        "titulo": "Respaldo logístico",
+        "texto": "Unidades propias, recolecciones y entregas programadas, y espacio de almacén."
+      },
+      {
+        "icono": "leaf",
+        "titulo": "Compromiso ambiental",
+        "texto": "Reciclaje sin envío a rellenos y procesos de reúso que fortalecen tu imagen."
+      },
+      {
+        "icono": "pin",
+        "titulo": "Talento local",
+        "texto": "Proveedores del Bajío con la respuesta y cercanía que tu operación necesita."
+      }
+    ],
+    "aliados": {
+      "titulo": "Hacemos equipo con empresas locales",
+      "texto": "Sumamos a empresas pequeñas y medianas de la región a nuestra red y les damos respaldo logístico, financiero y documental para que puedan atender a grandes empresas. Así acercamos el talento local a la industria, con la formalidad que tu área de compras exige.",
+      "cta": "¿Eres proveedor local? Súmate a nuestra red"
+    }
   },
   "secciones": [
     {
@@ -161,7 +217,7 @@
       "titulo": "Trapo industrial",
       "subtitulo": "Limpieza para la industria",
       "icono": "rag",
-      "descripcion": "",
+      "descripcion": "Abasto continuo de trapo y textiles de limpieza para mantenimiento, producción y talleres, con entregas programadas en el Bajío.",
       "items": [
         {
           "nombre": "Trapo de algodón",
@@ -207,7 +263,7 @@
       "titulo": "Fleje y cajas a medida",
       "subtitulo": "Suministros para embarque",
       "icono": "box",
-      "descripcion": "",
+      "descripcion": "Insumos para asegurar y embarcar tu producto. Fabricamos cajas a la medida de tu pieza desde 20 piezas, sin exigirte volúmenes de gran escala.",
       "items": [
         {
           "nombre": "Fleje",
@@ -229,7 +285,7 @@
       "titulo": "Material de empaque",
       "subtitulo": "Película, bolsas y cintas",
       "icono": "roll",
-      "descripcion": "",
+      "descripcion": "Consolida tus consumibles de empaque en un solo pedido: película, bolsas y cintas, en opción reciclada para reducir tu huella ambiental o virgen según tu especificación.",
       "items": [
         {
           "nombre": "Playo",
@@ -266,7 +322,7 @@
       "titulo": "Productos de limpieza",
       "subtitulo": "Insumos de limpieza y seguridad",
       "icono": "spray",
-      "descripcion": "",
+      "descripcion": "Insumos de limpieza y equipo de seguridad para tu planta, en la misma orden de compra que el resto de tus consumibles.",
       "items": [
         {
           "nombre": "Insumos de limpieza",
@@ -316,7 +372,7 @@
       "titulo": "Transporte local",
       "subtitulo": "",
       "icono": "truck",
-      "descripcion": "",
+      "descripcion": "Movimientos locales con unidades de 3.5 a 8 toneladas, caja seca y plataforma, para recolecciones y entregas programadas.",
       "items": [
         {
           "nombre": "Camiones de 3.5 a 8 toneladas",
@@ -407,7 +463,7 @@
       "titulo": "Tratamiento de agua",
       "subtitulo": "Plantas de tratamiento, equipos y servicios",
       "icono": "drop",
-      "descripcion": "",
+      "descripcion": "Operamos y damos mantenimiento a tu planta de tratamiento, y te suministramos equipos e insumos, para que tu equipo se enfoque en producir.",
       "destacados": [
         "PTAR biológicas y físico-químicas",
         "Planes de operación de 12 o 24 horas"
@@ -470,7 +526,7 @@
       "titulo": "Instalaciones eléctricas y paneles solares",
       "subtitulo": "",
       "icono": "sun",
-      "descripcion": "",
+      "descripcion": "Instalaciones eléctricas y sistemas de paneles solares para tu planta, integrados a tu misma relación comercial.",
       "items": [
         {
           "nombre": "Instalaciones eléctricas",
