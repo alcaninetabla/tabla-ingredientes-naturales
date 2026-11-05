@@ -24,10 +24,22 @@
       "icono": "recycle",
       "descripcion": "",
       "items": [
-        { "nombre": "Plásticos", "detalle": "" },
-        { "nombre": "Textiles", "detalle": "" },
-        { "nombre": "Madera", "detalle": "" },
-        { "nombre": "Metales", "detalle": "" }
+        {
+          "nombre": "Plásticos",
+          "detalle": ""
+        },
+        {
+          "nombre": "Textiles",
+          "detalle": ""
+        },
+        {
+          "nombre": "Madera",
+          "detalle": ""
+        },
+        {
+          "nombre": "Metales",
+          "detalle": ""
+        }
       ],
       "destacados": []
     },
@@ -50,17 +62,35 @@
         {
           "titulo": "Productos",
           "items": [
-            { "nombre": "Tarimas a medida", "detalle": "Madera nueva y reciclada, en diferentes medidas" },
-            { "nombre": "Cajas y huacales", "detalle": "Fabricación a medida" },
-            { "nombre": "Proyectos especiales de empaque", "detalle": "Dunnage, cajas, etc. Desarrollados a la medida" },
-            { "nombre": "Compra-venta de tarima reciclada", "detalle": "Recolección, transportación, clasificación y reutilización" }
+            {
+              "nombre": "Tarimas a medida",
+              "detalle": "Madera nueva y reciclada, en diferentes medidas"
+            },
+            {
+              "nombre": "Cajas y huacales",
+              "detalle": "Fabricación a medida"
+            },
+            {
+              "nombre": "Proyectos especiales de empaque",
+              "detalle": "Dunnage, cajas, etc. Desarrollados a la medida"
+            },
+            {
+              "nombre": "Compra-venta de tarima reciclada",
+              "detalle": "Recolección, transportación, clasificación y reutilización"
+            }
           ]
         },
         {
           "titulo": "Materiales",
           "items": [
-            { "nombre": "Madera de pino", "detalle": "Nueva o reciclada, tipo especial" },
-            { "nombre": "Componentes", "detalle": "Tacón, barrote, polín y triplay" }
+            {
+              "nombre": "Madera de pino",
+              "detalle": "Nueva o reciclada, tipo especial"
+            },
+            {
+              "nombre": "Componentes",
+              "detalle": "Tacón, barrote, polín y triplay"
+            }
           ]
         }
       ]
@@ -77,8 +107,14 @@
         "Autorización de tratamiento térmico y sellos HT-641"
       ],
       "bloques": [
-        { "titulo": "Maquinaria y equipo", "texto": "Clavadoras neumáticas, barras y mesas de ensamble, bancos de sierra, horno de tratamiento térmico, fumigadora, troqueladoras, motacargas, camiones desde 3.5 hasta 8 toneladas, caja seca y plataformas." },
-        { "titulo": "Personal y control", "texto": "Personal capacitado y familiarizado con el trabajo en la industria productiva. Control de fumigación y desinfección rutinaria en nuestras instalaciones." }
+        {
+          "titulo": "Maquinaria y equipo",
+          "texto": "Clavadoras neumáticas, barras y mesas de ensamble, bancos de sierra, horno de tratamiento térmico, fumigadora, troqueladoras, motacargas, camiones desde 3.5 hasta 8 toneladas, caja seca y plataformas."
+        },
+        {
+          "titulo": "Personal y control",
+          "texto": "Personal capacitado y familiarizado con el trabajo en la industria productiva. Control de fumigación y desinfección rutinaria en nuestras instalaciones."
+        }
       ],
       "lista": {
         "titulo": "¿Por qué nosotros?",
@@ -99,16 +135,43 @@
       "icono": "rag",
       "descripcion": "",
       "items": [
-        { "nombre": "Trapo de algodón", "detalle": "Nuevo y prelavado" },
-        { "nombre": "Trapo tipo playera", "detalle": "" },
-        { "nombre": "Trapo tipo sábana", "detalle": "" },
-        { "nombre": "Trapo plano de algodón", "detalle": "" },
-        { "nombre": "Microfibra", "detalle": "" },
-        { "nombre": "Toalla de felpa y toalla industrial", "detalle": "" },
-        { "nombre": "Estopa de algodón", "detalle": "" },
-        { "nombre": "Toallitas húmedas en cubeta", "detalle": "Para desengrasar y desinfectar" }
+        {
+          "nombre": "Trapo de algodón",
+          "detalle": "Nuevo y prelavado"
+        },
+        {
+          "nombre": "Trapo tipo playera",
+          "detalle": ""
+        },
+        {
+          "nombre": "Trapo tipo sábana",
+          "detalle": ""
+        },
+        {
+          "nombre": "Trapo plano de algodón",
+          "detalle": ""
+        },
+        {
+          "nombre": "Microfibra",
+          "detalle": ""
+        },
+        {
+          "nombre": "Toalla de felpa y toalla industrial",
+          "detalle": ""
+        },
+        {
+          "nombre": "Estopa de algodón",
+          "detalle": ""
+        },
+        {
+          "nombre": "Toallitas húmedas en cubeta",
+          "detalle": "Para desengrasar y desinfectar"
+        }
       ],
-      "destacados": ["Stock continuo", "Entrega de 1 a 2 días en el Bajío"]
+      "destacados": [
+        "Stock continuo",
+        "Entrega de 1 a 2 días en el Bajío"
+      ]
     },
     {
       "id": "industrial",
@@ -117,10 +180,18 @@
       "icono": "box",
       "descripcion": "",
       "items": [
-        { "nombre": "Fleje", "detalle": "" },
-        { "nombre": "Cajas a medida especial", "detalle": "Orden mínima desde 20 piezas" }
+        {
+          "nombre": "Fleje",
+          "detalle": ""
+        },
+        {
+          "nombre": "Cajas a medida especial",
+          "detalle": "Orden mínima desde 20 piezas"
+        }
       ],
-      "destacados": ["Cajas a medida: orden mínima desde 20 piezas"]
+      "destacados": [
+        "Cajas a medida: orden mínima desde 20 piezas"
+      ]
     },
     {
       "id": "empaque",
@@ -129,13 +200,30 @@
       "icono": "roll",
       "descripcion": "",
       "items": [
-        { "nombre": "Playo", "detalle": "" },
-        { "nombre": "Bolsa de empaque", "detalle": "Reciclada y virgen" },
-        { "nombre": "Bolsa para basura", "detalle": "" },
-        { "nombre": "Cinta de empaque", "detalle": "" },
-        { "nombre": "Cinta doble cara", "detalle": "" }
+        {
+          "nombre": "Playo",
+          "detalle": ""
+        },
+        {
+          "nombre": "Bolsa de empaque",
+          "detalle": "Reciclada y virgen"
+        },
+        {
+          "nombre": "Bolsa para basura",
+          "detalle": ""
+        },
+        {
+          "nombre": "Cinta de empaque",
+          "detalle": ""
+        },
+        {
+          "nombre": "Cinta doble cara",
+          "detalle": ""
+        }
       ],
-      "destacados": ["Opciones recicladas y vírgenes"]
+      "destacados": [
+        "Opciones recicladas y vírgenes"
+      ]
     },
     {
       "id": "limpieza",
@@ -144,8 +232,14 @@
       "icono": "spray",
       "descripcion": "",
       "items": [
-        { "nombre": "Insumos de limpieza", "detalle": "" },
-        { "nombre": "Equipo de seguridad", "detalle": "" }
+        {
+          "nombre": "Insumos de limpieza",
+          "detalle": ""
+        },
+        {
+          "nombre": "Equipo de seguridad",
+          "detalle": ""
+        }
       ],
       "destacados": []
     },
@@ -156,9 +250,18 @@
       "icono": "cart",
       "descripcion": "",
       "items": [
-        { "nombre": "Amazon", "detalle": "" },
-        { "nombre": "MercadoLibre", "detalle": "" },
-        { "nombre": "Otras plataformas", "detalle": "" }
+        {
+          "nombre": "Amazon",
+          "detalle": ""
+        },
+        {
+          "nombre": "MercadoLibre",
+          "detalle": ""
+        },
+        {
+          "nombre": "Otras plataformas",
+          "detalle": ""
+        }
       ],
       "destacados": []
     },
@@ -169,8 +272,14 @@
       "icono": "truck",
       "descripcion": "",
       "items": [
-        { "nombre": "Camiones de 3.5 a 8 toneladas", "detalle": "" },
-        { "nombre": "Caja seca y plataformas", "detalle": "" }
+        {
+          "nombre": "Camiones de 3.5 a 8 toneladas",
+          "detalle": ""
+        },
+        {
+          "nombre": "Caja seca y plataformas",
+          "detalle": ""
+        }
       ],
       "destacados": []
     },
@@ -184,31 +293,111 @@
       "destacados": []
     },
     {
+      "id": "viajes",
+      "titulo": "Viajes y eventos empresariales",
+      "subtitulo": "Hospedaje corporativo y organización de eventos",
+      "icono": "plane",
+      "imagen": "assets/eventos.jpg",
+      "descripcion": "Turismo de negocios: gestionamos de forma integral el hospedaje para empresas, equipos de trabajo y organizadores de eventos, con cobertura a nivel nacional.",
+      "destacados": [
+        "Ahorro de tiempo y dinero",
+        "Tarifas exclusivas por alianzas estratégicas",
+        "Cobertura a nivel nacional",
+        "Más de 10 años de experiencia en el sector hotelero"
+      ],
+      "grupos": [
+        {
+          "titulo": "Servicios",
+          "items": [
+            {
+              "nombre": "Hospedaje",
+              "detalle": "Selección de hoteles de acuerdo al perfil de cada evento"
+            },
+            {
+              "nombre": "Eventos",
+              "detalle": "Organización y selección de salas y salones, desde la planificación hasta la ejecución y seguimiento"
+            },
+            {
+              "nombre": "Negociación",
+              "detalle": "Con hoteles y proveedores para obtener mejores tarifas, condiciones y espacios"
+            },
+            {
+              "nombre": "Servicio personalizado",
+              "detalle": "Trabajamos contigo para entender tus necesidades y preferencias"
+            }
+          ]
+        }
+      ],
+      "lista": {
+        "titulo": "Gestionamos hospedaje para",
+        "items": [
+          "Congresos y convenciones",
+          "Ferias y exposiciones",
+          "Eventos corporativos",
+          "Proyectos temporales en otras ciudades",
+          "Viajes de trabajo grupales"
+        ]
+      }
+    },
+    {
       "id": "agua",
       "titulo": "Tratamiento de agua",
       "subtitulo": "Plantas de tratamiento, equipos y servicios",
       "icono": "drop",
       "descripcion": "",
-      "destacados": ["PTAR biológicas y físico-químicas", "Planes de operación de 12 o 24 horas"],
+      "destacados": [
+        "PTAR biológicas y físico-químicas",
+        "Planes de operación de 12 o 24 horas"
+      ],
       "grupos": [
         {
           "titulo": "Servicios",
           "items": [
-            { "nombre": "Operación de plantas de tratamiento de agua residual (PTAR)", "detalle": "Biológicas y físico-químicas, planes de 12 o 24 horas" },
-            { "nombre": "Mantenimiento a PTAR", "detalle": "Preventivo y correctivo" },
-            { "nombre": "Tratamiento químico", "detalle": "Para torres de enfriamiento y calderas" },
-            { "nombre": "Instalación de equipos", "detalle": "" },
-            { "nombre": "Análisis físico-químicos en campo", "detalle": "" },
-            { "nombre": "Adecuaciones hidráulicas", "detalle": "" }
+            {
+              "nombre": "Operación de plantas de tratamiento de agua residual (PTAR)",
+              "detalle": "Biológicas y físico-químicas, planes de 12 o 24 horas"
+            },
+            {
+              "nombre": "Mantenimiento a PTAR",
+              "detalle": "Preventivo y correctivo"
+            },
+            {
+              "nombre": "Tratamiento químico",
+              "detalle": "Para torres de enfriamiento y calderas"
+            },
+            {
+              "nombre": "Instalación de equipos",
+              "detalle": ""
+            },
+            {
+              "nombre": "Análisis físico-químicos en campo",
+              "detalle": ""
+            },
+            {
+              "nombre": "Adecuaciones hidráulicas",
+              "detalle": ""
+            }
           ]
         },
         {
           "titulo": "Equipos e insumos",
           "items": [
-            { "nombre": "Ósmosis inversa", "detalle": "Membranas y equipos" },
-            { "nombre": "Sistemas de suavizado", "detalle": "Y válvulas para sistemas de tratamiento" },
-            { "nombre": "Tanques hidroneumáticos y filtros de disco", "detalle": "" },
-            { "nombre": "Medios filtrantes", "detalle": "Carbón activado, arenas sílicas, gravas, antracita, garnet, green sand y resinas de intercambio iónico" }
+            {
+              "nombre": "Ósmosis inversa",
+              "detalle": "Membranas y equipos"
+            },
+            {
+              "nombre": "Sistemas de suavizado",
+              "detalle": "Y válvulas para sistemas de tratamiento"
+            },
+            {
+              "nombre": "Tanques hidroneumáticos y filtros de disco",
+              "detalle": ""
+            },
+            {
+              "nombre": "Medios filtrantes",
+              "detalle": "Carbón activado, arenas sílicas, gravas, antracita, garnet, green sand y resinas de intercambio iónico"
+            }
           ]
         }
       ]
@@ -220,8 +409,14 @@
       "icono": "sun",
       "descripcion": "",
       "items": [
-        { "nombre": "Instalaciones eléctricas", "detalle": "" },
-        { "nombre": "Paneles solares", "detalle": "" }
+        {
+          "nombre": "Instalaciones eléctricas",
+          "detalle": ""
+        },
+        {
+          "nombre": "Paneles solares",
+          "detalle": ""
+        }
       ],
       "destacados": []
     }

@@ -88,8 +88,8 @@ a { color: inherit; text-decoration: none; }
 .bic .ic { width: 36px; height: 36px; }
 .band h2 { font-size: 30px; line-height: 1.1; letter-spacing: -.4px; }
 .band p { color: #d9e9cf; margin-top: 6px; font-size: 15px; }
-.hero { display: block; width: calc(100% + 1.2in); margin: 0 -0.6in; height: 2.1in; object-fit: cover; }
-.body { padding-top: 28px; display: flex; flex-direction: column; }
+.hero { display: block; width: calc(100% + 1.2in); margin: 0 -0.6in; height: 1.7in; object-fit: cover; }
+.body { padding-top: 22px; display: flex; flex-direction: column; }
 .desc { font-size: 15px; line-height: 1.6; }
 .badges { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
 .badge {
@@ -135,7 +135,7 @@ a { color: inherit; text-decoration: none; }
 .gt + .cards { margin-top: 10px; }
 .blks { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
 .blk p { font-size: 13.5px; line-height: 1.55; margin-top: 8px; }
-.why { margin-top: 24px; background: var(--verde); color: #fff; border-radius: 14px; padding: 18px 22px; }
+.why { margin-top: 18px; background: var(--verde); color: #fff; border-radius: 14px; padding: 18px 22px; }
 .why h3 { font-size: 22px; color: var(--lima); }
 .why ul { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 8px 22px; margin-top: 12px; }
 .why li { display: flex; gap: 8px; font-size: 13px; line-height: 1.4; }
