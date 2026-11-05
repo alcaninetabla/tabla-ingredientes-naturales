@@ -4,6 +4,7 @@
 const fs = require('fs');
 const path = require('path');
 const { chromium } = require('playwright');
+const ilus = require('./ilustraciones');
 
 const DIR = __dirname;
 const BORRADOR = process.argv.includes('--borrador');
@@ -70,7 +71,7 @@ const contactRows = [
   ['phone', 'Teléfono', contacto.telefono, contacto.telefono && `tel:+${intl(contacto.telefono)}`],
   ['mail', 'Correo', contacto.email, contacto.email && `mailto:${contacto.email}`],
   ['web', 'Sitio web', contacto.web, contacto.web && (/^https?:/.test(contacto.web) ? contacto.web : `https://${contacto.web}`)],
-  ['pin', 'Dirección', contacto.direccion, contacto.direccion && `https://maps.google.com/?q=${encodeURIComponent(contacto.direccion)}`],
+  ...(contacto.direcciones || []).map((d) => ['pin', d.etiqueta, d.direccion, `https://maps.google.com/?q=${encodeURIComponent(d.direccion)}`]),
   ['clock', 'Horario', contacto.horario, ''],
 ];
 
@@ -143,7 +144,7 @@ secciones.forEach((s, i) => {
     list
       .map(
         (it) => `<div class="card">
-        ${it.imagen && img(it.imagen) ? `<img src="${img(it.imagen)}" alt="">` : ''}
+        ${it.imagen && img(it.imagen) ? `<img src="${img(it.imagen)}" alt="">` : it.ilustracion ? `<div class="ill">${ilus(it.ilustracion)}</div>` : ''}
         <h4>${icon('check')}${esc(it.nombre)}</h4>
         ${it.detalle ? `<p>${esc(it.detalle)}</p>` : ''}
       </div>`
@@ -166,7 +167,7 @@ secciones.forEach((s, i) => {
       <span class="bic">${icon(s.icono)}</span>
       <div><h2>${esc(s.titulo)}</h2>${s.subtitulo ? `<p>${esc(s.subtitulo)}</p>` : ''}</div>
     </header>
-    ${foto ? `<img class="hero" src="${foto}" alt="">` : ''}
+    ${foto ? `<img class="hero" src="${foto}" alt="">` : s.ilustracion ? `<div class="sec-ill">${ilus(s.ilustracion)}</div>` : ''}
     <div class="body">
       ${s.descripcion ? `<p class="desc">${esc(s.descripcion)}</p>` : cont ? '' : pendiente('Descripción del servicio')}
       ${(s.destacados || []).length ? `<div class="badges">${s.destacados.map((d) => `<span class="badge">${icon('check')}${esc(d)}</span>`).join('')}</div>` : ''}

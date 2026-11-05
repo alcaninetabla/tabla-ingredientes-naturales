@@ -140,3 +140,9 @@ a { color: inherit; text-decoration: none; }
 .why ul { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 8px 22px; margin-top: 12px; }
 .why li { display: flex; gap: 8px; font-size: 13px; line-height: 1.4; }
 .why li .ic { color: var(--lima); margin-top: 2px; }
+
+/* ---------- Ilustraciones de producto ---------- */
+.ill { background: var(--fondo); border-radius: 8px; height: 1.25in; display: grid; place-items: center; margin-bottom: 10px; }
+.ill svg { height: 1.1in; width: auto; }
+.sec-ill { margin: 0 -0.6in; background: var(--lima-claro); display: grid; place-items: center; height: 1.7in; }
+.sec-ill svg { height: 1.5in; }

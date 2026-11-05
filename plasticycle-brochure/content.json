@@ -11,9 +11,18 @@
   "contacto": {
     "whatsapp": "479 221 4882",
     "telefono": "477 599 8301",
-    "email": "ceogroup@gmail.com",
+    "email": "ceogroupmx@gmail.com",
     "web": "",
-    "direccion": "Calle Pino #79, Col. La Patiña, León, Gto. C.P. 37696 (Planta de tarimas)",
+    "direcciones": [
+      {
+        "etiqueta": "Oficinas",
+        "direccion": "Calle Mayagüez 115, Col. El Palote, León, Gto. C.P. 37130"
+      },
+      {
+        "etiqueta": "Planta de tarimas",
+        "direccion": "Calle Pino #79, Col. La Patiña, León, Gto. C.P. 37696"
+      }
+    ],
     "horario": ""
   },
   "secciones": [
@@ -26,19 +35,23 @@
       "items": [
         {
           "nombre": "Plásticos",
-          "detalle": ""
+          "detalle": "",
+          "ilustracion": "plasticos"
         },
         {
           "nombre": "Textiles",
-          "detalle": ""
+          "detalle": "",
+          "ilustracion": "textiles"
         },
         {
           "nombre": "Madera",
-          "detalle": ""
+          "detalle": "",
+          "ilustracion": "madera"
         },
         {
           "nombre": "Metales",
-          "detalle": ""
+          "detalle": "",
+          "ilustracion": "metales"
         }
       ],
       "destacados": []
@@ -171,7 +184,8 @@
       "destacados": [
         "Stock continuo",
         "Entrega de 1 a 2 días en el Bajío"
-      ]
+      ],
+      "ilustracion": "trapo"
     },
     {
       "id": "industrial",
@@ -182,11 +196,13 @@
       "items": [
         {
           "nombre": "Fleje",
-          "detalle": ""
+          "detalle": "",
+          "ilustracion": "fleje"
         },
         {
           "nombre": "Cajas a medida especial",
-          "detalle": "Orden mínima desde 20 piezas"
+          "detalle": "Orden mínima desde 20 piezas",
+          "ilustracion": "caja"
         }
       ],
       "destacados": [
@@ -202,23 +218,28 @@
       "items": [
         {
           "nombre": "Playo",
-          "detalle": ""
+          "detalle": "",
+          "ilustracion": "playo"
         },
         {
           "nombre": "Bolsa de empaque",
-          "detalle": "Reciclada y virgen"
+          "detalle": "Reciclada y virgen",
+          "ilustracion": "bolsaEmpaque"
         },
         {
           "nombre": "Bolsa para basura",
-          "detalle": ""
+          "detalle": "",
+          "ilustracion": "bolsaBasura"
         },
         {
           "nombre": "Cinta de empaque",
-          "detalle": ""
+          "detalle": "",
+          "ilustracion": "cinta"
         },
         {
           "nombre": "Cinta doble cara",
-          "detalle": ""
+          "detalle": "",
+          "ilustracion": "dobleCara"
         }
       ],
       "destacados": [
@@ -234,11 +255,13 @@
       "items": [
         {
           "nombre": "Insumos de limpieza",
-          "detalle": ""
+          "detalle": "",
+          "ilustracion": "limpieza"
         },
         {
           "nombre": "Equipo de seguridad",
-          "detalle": ""
+          "detalle": "",
+          "ilustracion": "seguridad"
         }
       ],
       "destacados": []
