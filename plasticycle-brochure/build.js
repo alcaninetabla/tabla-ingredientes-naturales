@@ -31,6 +31,7 @@ const ICONS = {
   pallet: '<rect x="2" y="15" width="20" height="3" rx=".5"/><path d="M4 18v3M12 18v3M20 18v3M2 21h20"/><rect x="4" y="5" width="7" height="10"/><rect x="13" y="8" width="7" height="7"/>',
   box: '<path d="M21 8 12 3 3 8v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v8"/>',
   roll: '<ellipse cx="7" cy="12" rx="4" ry="8"/><ellipse cx="7" cy="12" rx="1.3" ry="2.6"/><path d="M7 4h11v13l-3-1-3 1-3-1-2 3"/>',
+  rag: '<path d="M4 6c3-2 5 1 8-1s5 0 8-1v12c-3 1-5-1-8 1s-5-1-8 1z"/><path d="M8 9.5c2-.8 3 .4 5-.4M8 13c2-.8 3 .4 5-.4"/>',
   spray: '<path d="M8 10h6v11H8zM9 10V7h4v3M13 7h3l2-2M9 7l-2-2h6"/><path d="M19 9h2M19 12h2M18.5 6l1.5-1.5"/>',
   cart: '<circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.7 12.4a1.5 1.5 0 0 0 1.5 1.1h8.6a1.5 1.5 0 0 0 1.5-1.1L21 7H6"/>',
   truck: '<path d="M2 5h12v11H2zM14 9h4l4 4v3h-8z"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/>',
@@ -54,16 +55,18 @@ const icon = (name, cls = '') =>
 
 // ---------- Enlaces de contacto ----------
 const digits = (s) => String(s || '').replace(/\D/g, '');
+// Números MX de 10 dígitos -> agrega lada de país 52
+const intl = (s) => (digits(s).length === 10 ? '52' + digits(s) : digits(s));
 function cotizarHref(servicio) {
   const msg = `Hola ${empresa.nombre}, me interesa cotizar: ${servicio}`;
-  if (contacto.whatsapp) return `https://wa.me/${digits(contacto.whatsapp)}?text=${encodeURIComponent(msg)}`;
+  if (contacto.whatsapp) return `https://wa.me/${intl(contacto.whatsapp)}?text=${encodeURIComponent(msg)}`;
   if (contacto.email)
     return `mailto:${contacto.email}?subject=${encodeURIComponent('Cotización: ' + servicio)}&body=${encodeURIComponent(msg)}`;
   return '#contacto';
 }
 const contactRows = [
-  ['wa', 'WhatsApp', contacto.whatsapp, contacto.whatsapp && `https://wa.me/${digits(contacto.whatsapp)}`],
-  ['phone', 'Teléfono', contacto.telefono, contacto.telefono && `tel:+${digits(contacto.telefono)}`],
+  ['wa', 'WhatsApp', contacto.whatsapp, contacto.whatsapp && `https://wa.me/${intl(contacto.whatsapp)}`],
+  ['phone', 'Teléfono', contacto.telefono, contacto.telefono && `tel:+${intl(contacto.telefono)}`],
   ['mail', 'Correo', contacto.email, contacto.email && `mailto:${contacto.email}`],
   ['web', 'Sitio web', contacto.web, contacto.web && (/^https?:/.test(contacto.web) ? contacto.web : `https://${contacto.web}`)],
   ['pin', 'Dirección', contacto.direccion, contacto.direccion && `https://maps.google.com/?q=${encodeURIComponent(contacto.direccion)}`],
@@ -72,10 +75,16 @@ const contactRows = [
 
 // ---------- Páginas ----------
 const logoSrc = img(empresa.logo);
+const iconoSrc = img(empresa.logoIcono);
 const brand = (cls = '') =>
   logoSrc
     ? `<img class="logo ${cls}" src="${logoSrc}" alt="${esc(empresa.nombre)}">`
-    : `<div class="wordmark ${cls}">${icon('recycle')}<span>${esc(empresa.nombre)}</span></div>`;
+    : `<div class="wordmark ${cls}">${iconoSrc ? `<span class="mark"><img src="${iconoSrc}" alt=""></span>` : icon('recycle')}<span>${esc(empresa.nombre)}</span></div>`;
+
+// Secciones visibles en índice (las de continuación usan "enIndice": false)
+const enIndice = secciones.filter((s) => s.enIndice !== false);
+const numDe = (s) => enIndice.indexOf(s) + 1;
+const pad = (n) => String(n).padStart(2, '0');
 
 const pages = [];
 const total = secciones.length + 3;
@@ -98,7 +107,7 @@ pages.push(`<section class="page cover" id="portada">
     ${brand('big')}
     <h1>Soluciones integrales de reciclaje,<br>empaque y servicios industriales</h1>
     ${empresa.lema ? `<p class="lema">${esc(empresa.lema)}</p>` : pendiente('Lema / frase de la empresa')}
-    <div class="chips">${secciones.map((s) => `<a href="#${s.id}" class="chip">${esc(s.titulo)}</a>`).join('')}</div>
+    <div class="chips">${enIndice.map((s) => `<a href="#${s.id}" class="chip">${esc(s.titulo)}</a>`).join('')}</div>
     <a class="cta big" href="#indice">Ver servicios ${icon('arrow')}</a>
   </div>
 </section>`);
@@ -108,10 +117,10 @@ pages.push(`<section class="page index" id="indice">
   <header class="ph"><h2>Nuestros servicios</h2><p>Toca cualquier servicio para ir directo a su sección.</p></header>
   ${empresa.descripcion ? `<p class="about">${esc(empresa.descripcion)}</p>` : pendiente('Descripción breve de la empresa (quiénes somos)')}
   <div class="grid-idx">
-    ${secciones
+    ${enIndice
       .map(
         (s, i) => `<a class="idx" href="#${s.id}">
-        <span class="num">${String(i + 1).padStart(2, '0')}</span>
+        <span class="num">${pad(i + 1)}</span>
         <span class="idx-ic">${icon(s.icono)}</span>
         <span class="idx-t"><b>${esc(s.titulo)}</b>${s.subtitulo ? `<small>${esc(s.subtitulo)}</small>` : ''}</span>
         <span class="go">${icon('arrow')}</span>
@@ -129,26 +138,40 @@ secciones.forEach((s, i) => {
   const prev = i === 0 ? 'indice' : secciones[i - 1].id;
   const next = i === secciones.length - 1 ? 'contacto' : secciones[i + 1].id;
   const foto = img(s.imagen);
-  const items = (s.items || [])
-    .map(
-      (it) => `<div class="card">
+  const cardsHtml = (list) =>
+    list
+      .map(
+        (it) => `<div class="card">
         ${it.imagen && img(it.imagen) ? `<img src="${img(it.imagen)}" alt="">` : ''}
         <h4>${icon('check')}${esc(it.nombre)}</h4>
         ${it.detalle ? `<p>${esc(it.detalle)}</p>` : ''}
       </div>`
-    )
+      )
+      .join('');
+  const grupos = s.grupos || ((s.items || []).length ? [{ titulo: '', items: s.items }] : []);
+  const items = grupos
+    .map((g) => `${g.titulo ? `<h3 class="gt">${esc(g.titulo)}</h3>` : ''}<div class="cards">${cardsHtml(g.items)}</div>`)
     .join('');
+  const bloques = (s.bloques || [])
+    .map((b) => `<div class="blk"><h3 class="gt">${esc(b.titulo)}</h3><p>${esc(b.texto)}</p></div>`)
+    .join('');
+  const lista = s.lista
+    ? `<div class="why"><h3>${esc(s.lista.titulo)}</h3><ul>${s.lista.items.map((t) => `<li>${icon('check')}${esc(t)}</li>`).join('')}</ul></div>`
+    : '';
+  const cont = s.enIndice === false;
   pages.push(`<section class="page svc" id="${s.id}">
     <header class="band">
-      <span class="bnum">${String(i + 1).padStart(2, '0')}</span>
+      <span class="bnum">${cont ? '' : pad(numDe(s))}</span>
       <span class="bic">${icon(s.icono)}</span>
       <div><h2>${esc(s.titulo)}</h2>${s.subtitulo ? `<p>${esc(s.subtitulo)}</p>` : ''}</div>
     </header>
     ${foto ? `<img class="hero" src="${foto}" alt="">` : ''}
     <div class="body">
-      ${s.descripcion ? `<p class="desc">${esc(s.descripcion)}</p>` : pendiente('Descripción del servicio')}
+      ${s.descripcion ? `<p class="desc">${esc(s.descripcion)}</p>` : cont ? '' : pendiente('Descripción del servicio')}
       ${(s.destacados || []).length ? `<div class="badges">${s.destacados.map((d) => `<span class="badge">${icon('check')}${esc(d)}</span>`).join('')}</div>` : ''}
-      ${items ? `<div class="cards">${items}</div>` : pendiente('Productos / variantes del servicio')}
+      ${bloques ? `<div class="blks">${bloques}</div>` : ''}
+      ${items || (cont ? '' : pendiente('Productos / variantes del servicio'))}
+      ${lista}
       <a class="cta" href="${esc(cotizarHref(s.titulo))}">${icon(contacto.whatsapp ? 'wa' : 'mail')} Solicitar cotización</a>
     </div>
     ${footer(n, prev, next)}
@@ -170,6 +193,7 @@ pages.push(`<section class="page contact" id="contacto">
         })
         .join('')}
     </div>
+    ${empresa.razonSocial ? `<p class="legal">${esc(empresa.razonSocial)}${empresa.rfc ? ` · RFC: ${esc(empresa.rfc)}` : ''}</p>` : ''}
     <a class="cta big light" href="#indice">${icon('home')} Volver al índice</a>
   </div>
   ${footer(total, secciones[secciones.length - 1].id, null)}

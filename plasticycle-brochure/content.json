@@ -1,16 +1,19 @@
 {
   "empresa": {
-    "nombre": "PlastiCycle",
+    "nombre": "PlastiCycle BJX",
+    "razonSocial": "PLASTICYCLE BJX S.A. DE C.V.",
+    "rfc": "PBJ2302176XA",
     "lema": "",
-    "descripcion": "",
+    "descripcion": "Somos una empresa integradora creada para dar soluciones a la industria en general en el Bajío. Nuestra red de proveedores locales certificados acerca el talento local a las grandes empresas.",
+    "logoIcono": "assets/logo-icono.png",
     "logo": ""
   },
   "contacto": {
-    "whatsapp": "",
-    "telefono": "",
-    "email": "",
+    "whatsapp": "479 221 4882",
+    "telefono": "477 599 8301",
+    "email": "ceogroup@gmail.com",
     "web": "",
-    "direccion": "",
+    "direccion": "Calle Pino #79, Col. La Patiña, León, Gto. C.P. 37696 (Planta de tarimas)",
     "horario": ""
   },
   "secciones": [
@@ -33,27 +36,87 @@
       "titulo": "Tarimas, cajas y huacales de madera",
       "subtitulo": "Fabricación y compra a medida",
       "icono": "pallet",
-      "descripcion": "",
-      "items": [
-        { "nombre": "Tarimas de madera a medida", "detalle": "Fabricación y compra" },
-        { "nombre": "Cajas de madera", "detalle": "" },
-        { "nombre": "Huacales", "detalle": "" }
-      ],
+      "imagen": "assets/tarima.jpg",
+      "descripcion": "Fabricamos tarima de madera nueva y reciclada de cualquier medida y requerimiento. 14 años de experiencia en la fabricación de tarima especial, recolección, transportación, clasificación y compra-venta de tarimas recicladas y su reutilización.",
       "destacados": [
         "HT (tratamiento térmico)",
-        "Certificado de fumigación",
-        "Madera nueva",
-        "Madera reciclada"
+        "Fumigación",
+        "Ranurados",
+        "Folios",
+        "Sellos",
+        "Hasta 1,400 tarimas diarias"
+      ],
+      "grupos": [
+        {
+          "titulo": "Productos",
+          "items": [
+            { "nombre": "Tarimas a medida", "detalle": "Madera nueva y reciclada, en diferentes medidas" },
+            { "nombre": "Cajas y huacales", "detalle": "Fabricación a medida" },
+            { "nombre": "Proyectos especiales de empaque", "detalle": "Dunnage, cajas, etc. Desarrollados a la medida" },
+            { "nombre": "Compra-venta de tarima reciclada", "detalle": "Recolección, transportación, clasificación y reutilización" }
+          ]
+        },
+        {
+          "titulo": "Materiales",
+          "items": [
+            { "nombre": "Madera de pino", "detalle": "Nueva o reciclada, tipo especial" },
+            { "nombre": "Componentes", "detalle": "Tacón, barrote, polín y triplay" }
+          ]
+        }
       ]
     },
     {
+      "id": "planta",
+      "enIndice": false,
+      "titulo": "Nuestra planta de tarimas",
+      "subtitulo": "Capacidad, equipo y certificaciones",
+      "icono": "warehouse",
+      "imagen": "assets/tarimas-camion.jpg",
+      "destacados": [
+        "Autorización SEMARNAT – tratamiento fitosanitario NOM-144 para exportación",
+        "Autorización de tratamiento térmico y sellos HT-641"
+      ],
+      "bloques": [
+        { "titulo": "Maquinaria y equipo", "texto": "Clavadoras neumáticas, barras y mesas de ensamble, bancos de sierra, horno de tratamiento térmico, fumigadora, troqueladoras, motacargas, camiones desde 3.5 hasta 8 toneladas, caja seca y plataformas." },
+        { "titulo": "Personal y control", "texto": "Personal capacitado y familiarizado con el trabajo en la industria productiva. Control de fumigación y desinfección rutinaria en nuestras instalaciones." }
+      ],
+      "lista": {
+        "titulo": "¿Por qué nosotros?",
+        "items": [
+          "Años de experiencia en el medio.",
+          "Gran capacidad y rapidez en fabricación.",
+          "Entregas programadas el mismo día, stock de seguridad.",
+          "Abasto y proveeduría segura en materiales.",
+          "Capacidad financiera y documentación en orden.",
+          "Respaldo de nuestros clientes a su servicio por años."
+        ]
+      }
+    },
+    {
+      "id": "trapo",
+      "titulo": "Trapo industrial",
+      "subtitulo": "Limpieza para la industria",
+      "icono": "rag",
+      "descripcion": "",
+      "items": [
+        { "nombre": "Trapo de algodón", "detalle": "Nuevo y prelavado" },
+        { "nombre": "Trapo tipo playera", "detalle": "" },
+        { "nombre": "Trapo tipo sábana", "detalle": "" },
+        { "nombre": "Trapo plano de algodón", "detalle": "" },
+        { "nombre": "Microfibra", "detalle": "" },
+        { "nombre": "Toalla de felpa y toalla industrial", "detalle": "" },
+        { "nombre": "Estopa de algodón", "detalle": "" },
+        { "nombre": "Toallitas húmedas en cubeta", "detalle": "Para desengrasar y desinfectar" }
+      ],
+      "destacados": ["Stock continuo", "Entrega de 1 a 2 días en el Bajío"]
+    },
+    {
       "id": "industrial",
-      "titulo": "Suministros industriales",
-      "subtitulo": "Trapo, fleje y cajas a medida",
+      "titulo": "Fleje y cajas a medida",
+      "subtitulo": "Suministros para embarque",
       "icono": "box",
       "descripcion": "",
       "items": [
-        { "nombre": "Trapo industrial", "detalle": "" },
         { "nombre": "Fleje", "detalle": "" },
         { "nombre": "Cajas a medida especial", "detalle": "Orden mínima desde 20 piezas" }
       ],
@@ -77,10 +140,13 @@
     {
       "id": "limpieza",
       "titulo": "Productos de limpieza",
-      "subtitulo": "",
+      "subtitulo": "Insumos de limpieza y seguridad",
       "icono": "spray",
       "descripcion": "",
-      "items": [],
+      "items": [
+        { "nombre": "Insumos de limpieza", "detalle": "" },
+        { "nombre": "Equipo de seguridad", "detalle": "" }
+      ],
       "destacados": []
     },
     {
@@ -102,7 +168,10 @@
       "subtitulo": "",
       "icono": "truck",
       "descripcion": "",
-      "items": [],
+      "items": [
+        { "nombre": "Camiones de 3.5 a 8 toneladas", "detalle": "" },
+        { "nombre": "Caja seca y plataformas", "detalle": "" }
+      ],
       "destacados": []
     },
     {
@@ -117,14 +186,32 @@
     {
       "id": "agua",
       "titulo": "Tratamiento de agua",
-      "subtitulo": "Plantas de tratamiento y servicios",
+      "subtitulo": "Plantas de tratamiento, equipos y servicios",
       "icono": "drop",
       "descripcion": "",
-      "items": [
-        { "nombre": "Plantas de tratamiento", "detalle": "" },
-        { "nombre": "Servicios para tratamiento de agua", "detalle": "" }
-      ],
-      "destacados": []
+      "destacados": ["PTAR biológicas y físico-químicas", "Planes de operación de 12 o 24 horas"],
+      "grupos": [
+        {
+          "titulo": "Servicios",
+          "items": [
+            { "nombre": "Operación de plantas de tratamiento de agua residual (PTAR)", "detalle": "Biológicas y físico-químicas, planes de 12 o 24 horas" },
+            { "nombre": "Mantenimiento a PTAR", "detalle": "Preventivo y correctivo" },
+            { "nombre": "Tratamiento químico", "detalle": "Para torres de enfriamiento y calderas" },
+            { "nombre": "Instalación de equipos", "detalle": "" },
+            { "nombre": "Análisis físico-químicos en campo", "detalle": "" },
+            { "nombre": "Adecuaciones hidráulicas", "detalle": "" }
+          ]
+        },
+        {
+          "titulo": "Equipos e insumos",
+          "items": [
+            { "nombre": "Ósmosis inversa", "detalle": "Membranas y equipos" },
+            { "nombre": "Sistemas de suavizado", "detalle": "Y válvulas para sistemas de tratamiento" },
+            { "nombre": "Tanques hidroneumáticos y filtros de disco", "detalle": "" },
+            { "nombre": "Medios filtrantes", "detalle": "Carbón activado, arenas sílicas, gravas, antracita, garnet, green sand y resinas de intercambio iónico" }
+          ]
+        }
+      ]
     },
     {
       "id": "energia",

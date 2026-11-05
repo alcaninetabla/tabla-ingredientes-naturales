@@ -1,13 +1,14 @@
 /* Paleta de marca: ajustar aquí cuando se tengan los colores oficiales */
 :root {
-  --verde: #0f4c3a;
-  --verde-2: #136f52;
-  --lima: #8cc63f;
-  --lima-claro: #eef7e2;
-  --tinta: #1d2a25;
-  --gris: #5c6b65;
-  --linea: #dfe7e2;
-  --fondo: #f7faf8;
+  /* Tomados del folleto de PlastiCycle BJX: café oscuro, verde y crema */
+  --verde: #3f3a33;      /* fondo oscuro de bandas y portada */
+  --verde-2: #1f9d55;    /* verde de títulos / enlaces */
+  --lima: #6cd36b;       /* verde brillante de acento */
+  --lima-claro: #eaf8e4;
+  --tinta: #2b2925;
+  --gris: #6b675f;
+  --linea: #e4e2d6;
+  --fondo: #fbfbee;
 }
 @page { size: Letter; margin: 0; }
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -27,9 +28,9 @@ a { color: inherit; text-decoration: none; }
 .cover-bg {
   position: absolute; inset: 0;
   background:
-    radial-gradient(circle at 85% 12%, rgba(140,198,63,.45) 0 18%, transparent 18.2%),
+    radial-gradient(circle at 85% 12%, rgba(108,211,107,.45) 0 18%, transparent 18.2%),
     radial-gradient(circle at 92% 92%, rgba(255,255,255,.07) 0 30%, transparent 30.2%),
-    radial-gradient(circle at 5% 70%, rgba(140,198,63,.18) 0 22%, transparent 22.2%),
+    radial-gradient(circle at 5% 70%, rgba(108,211,107,.18) 0 22%, transparent 22.2%),
     linear-gradient(160deg, var(--verde-2), var(--verde) 60%);
 }
 .cover-in { position: relative; height: 100%; padding: 1in 0.8in; display: flex; flex-direction: column; justify-content: center; gap: 28px; }
@@ -38,6 +39,10 @@ a { color: inherit; text-decoration: none; }
 .wordmark.big { font-size: 54px; }
 .wordmark.big .ic { width: 68px; height: 68px; }
 .logo.big { max-width: 3.6in; max-height: 1.6in; object-fit: contain; align-self: flex-start; }
+.wordmark .mark { width: 60px; height: 70px; background: #fff; border-radius: 12px; display: grid; place-items: center; padding: 6px; flex: none; }
+.wordmark .mark img { width: 100%; height: 100%; object-fit: contain; }
+.wordmark.big .mark { width: 92px; height: 106px; border-radius: 18px; padding: 10px; }
+.legal { font-size: 12px; color: #cfcab8; letter-spacing: .3px; }
 .cover h1 { font-size: 38px; line-height: 1.15; font-weight: 700; letter-spacing: -.6px; max-width: 6.4in; }
 .contact h2 { font-size: 36px; font-weight: 700; }
 .lema { font-size: 18px; color: #d6ecd0; }
@@ -78,12 +83,12 @@ a { color: inherit; text-decoration: none; }
   display: flex; align-items: center; gap: 18px; position: relative;
 }
 .band::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 6px; background: var(--lima); }
-.bnum { font-size: 64px; font-weight: 800; color: rgba(140,198,63,.55); line-height: 1; }
+.bnum { font-size: 64px; font-weight: 800; color: rgba(108,211,107,.55); line-height: 1; }
 .bic { width: 62px; height: 62px; border-radius: 16px; background: rgba(255,255,255,.1); display: grid; place-items: center; color: var(--lima); flex: none; }
 .bic .ic { width: 36px; height: 36px; }
 .band h2 { font-size: 30px; line-height: 1.1; letter-spacing: -.4px; }
-.band p { color: #cfe6c8; margin-top: 6px; font-size: 15px; }
-.hero { display: block; width: calc(100% + 1.2in); margin: 0 -0.6in; height: 2.8in; object-fit: cover; }
+.band p { color: #d9e9cf; margin-top: 6px; font-size: 15px; }
+.hero { display: block; width: calc(100% + 1.2in); margin: 0 -0.6in; height: 2.1in; object-fit: cover; }
 .body { padding-top: 28px; display: flex; flex-direction: column; }
 .desc { font-size: 15px; line-height: 1.6; }
 .badges { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
@@ -124,3 +129,14 @@ a { color: inherit; text-decoration: none; }
   background: #fff8e1; color: #8a6400; font-size: 13px; font-weight: 600;
 }
 .cover .pend { background: rgba(255,248,225,.15); color: #ffe082; border-color: #ffe082; }
+
+/* ---------- Grupos, bloques y lista ---------- */
+.gt { font-size: 13px; text-transform: uppercase; letter-spacing: 1.2px; color: var(--verde-2); margin-top: 22px; }
+.gt + .cards { margin-top: 10px; }
+.blks { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.blk p { font-size: 13.5px; line-height: 1.55; margin-top: 8px; }
+.why { margin-top: 24px; background: var(--verde); color: #fff; border-radius: 14px; padding: 18px 22px; }
+.why h3 { font-size: 22px; color: var(--lima); }
+.why ul { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 8px 22px; margin-top: 12px; }
+.why li { display: flex; gap: 8px; font-size: 13px; line-height: 1.4; }
+.why li .ic { color: var(--lima); margin-top: 2px; }
