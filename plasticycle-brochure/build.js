@@ -4,17 +4,43 @@
 const fs = require('fs');
 const path = require('path');
 const { chromium } = require('playwright');
-const ilus = require('./ilustraciones');
+const ilusBase = require('./ilustraciones');
 
 const DIR = __dirname;
 const BORRADOR = process.argv.includes('--borrador');
-const data = JSON.parse(fs.readFileSync(path.join(DIR, 'content.json'), 'utf8'));
+const EN = process.argv.includes('--en');
+const data = JSON.parse(fs.readFileSync(path.join(DIR, EN ? 'content.en.json' : 'content.json'), 'utf8'));
+
+// Textos fijos de la interfaz por idioma
+const T = EN
+  ? {
+      lang: 'en', kicker: 'Integrator model', pend: 'Pending information', hola: (e, s) => `Hello ${e}, I'd like a quote for: ${s}`, cotiz: 'Quote request: ',
+      tel: 'Phone', mail: 'Email', web: 'Website', horario: 'Hours', indice: 'Contents', ant: 'Previous', sig: 'Next',
+      lema: 'Company tagline', modelo: 'Discover our model', verServ: 'View services',
+      sumarse: (e) => `Hello ${e}, I'm a local supplier and I'd like to join your network.`,
+      gana: 'What your purchasing team gains', servicios: 'Our services', toca: 'Tap any service to jump straight to its section.',
+      descEmp: 'Short company description', contacto: 'Contact us', descServ: 'Service description', prods: 'Products / service options',
+      cotizar: 'Request a quote', hablemos: "Let's talk about your project", volver: 'Back to contents', rfc: 'Tax ID (RFC)',
+      titulo: 'Services brochure', pags: 'pages',
+      ilus: { Pedido: 'Order', Entrega: 'Delivery', 'Tu empresa': 'Your company', 'y más…': 'and more…' },
+    }
+  : {
+      lang: 'es', kicker: 'Modelo integrador', pend: 'Información pendiente', hola: (e, s) => `Hola ${e}, me interesa cotizar: ${s}`, cotiz: 'Cotización: ',
+      tel: 'Teléfono', mail: 'Correo', web: 'Sitio web', horario: 'Horario', indice: 'Índice', ant: 'Anterior', sig: 'Siguiente',
+      lema: 'Lema / frase de la empresa', modelo: 'Conoce nuestro modelo', verServ: 'Ver servicios',
+      sumarse: (e) => `Hola ${e}, soy proveedor local y me interesa sumarme a su red.`,
+      gana: 'Lo que gana tu área de compras', servicios: 'Nuestros servicios', toca: 'Toca cualquier servicio para ir directo a su sección.',
+      descEmp: 'Descripción breve de la empresa (quiénes somos)', contacto: 'Contáctanos', descServ: 'Descripción del servicio',
+      prods: 'Productos / variantes del servicio', cotizar: 'Solicitar cotización', hablemos: 'Hablemos de tu proyecto',
+      volver: 'Volver al índice', rfc: 'RFC', titulo: 'Brochure de servicios', pags: 'páginas', ilus: {},
+    };
 const { empresa, contacto, secciones, modelo } = data;
 
 const esc = (s = '') =>
   String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
-const pendiente = (txt = 'Información pendiente') =>
+const ilus = (k) => Object.entries(T.ilus).reduce((svg, [a, b]) => svg.split(`>${a}<`).join(`>${b}<`), ilusBase(k));
+const pendiente = (txt = T.pend) =>
   BORRADOR ? `<div class="pend">${esc(txt)}</div>` : '';
 
 // Imágenes locales -> data URI para que queden embebidas en el PDF
@@ -62,19 +88,19 @@ const digits = (s) => String(s || '').replace(/\D/g, '');
 // Números MX de 10 dígitos -> agrega lada de país 52
 const intl = (s) => (digits(s).length === 10 ? '52' + digits(s) : digits(s));
 function cotizarHref(servicio) {
-  const msg = `Hola ${empresa.nombre}, me interesa cotizar: ${servicio}`;
+  const msg = T.hola(empresa.nombre, servicio);
   if (contacto.whatsapp) return `https://wa.me/${intl(contacto.whatsapp)}?text=${encodeURIComponent(msg)}`;
   if (contacto.email)
-    return `mailto:${contacto.email}?subject=${encodeURIComponent('Cotización: ' + servicio)}&body=${encodeURIComponent(msg)}`;
+    return `mailto:${contacto.email}?subject=${encodeURIComponent(T.cotiz + servicio)}&body=${encodeURIComponent(msg)}`;
   return '#contacto';
 }
 const contactRows = [
   ['wa', 'WhatsApp', contacto.whatsapp, contacto.whatsapp && `https://wa.me/${intl(contacto.whatsapp)}`],
-  ['phone', 'Teléfono', contacto.telefono, contacto.telefono && `tel:+${intl(contacto.telefono)}`],
-  ['mail', 'Correo', contacto.email, contacto.email && `mailto:${contacto.email}`],
-  ['web', 'Sitio web', contacto.web, contacto.web && (/^https?:/.test(contacto.web) ? contacto.web : `https://${contacto.web}`)],
+  ['phone', T.tel, contacto.telefono, contacto.telefono && `tel:+${intl(contacto.telefono)}`],
+  ['mail', T.mail, contacto.email, contacto.email && `mailto:${contacto.email}`],
+  ['web', T.web, contacto.web, contacto.web && (/^https?:/.test(contacto.web) ? contacto.web : `https://${contacto.web}`)],
   ...(contacto.direcciones || []).map((d) => ['pin', d.etiqueta, d.direccion, `https://maps.google.com/?q=${encodeURIComponent(d.direccion)}`]),
-  ['clock', 'Horario', contacto.horario, ''],
+  ['clock', T.horario, contacto.horario, ''],
 ];
 
 // ---------- Páginas ----------
@@ -95,11 +121,11 @@ const total = secciones.length + 4;
 
 function footer(n, prevId, nextId) {
   return `<footer class="foot">
-    <a class="nav" href="#indice">${icon('home')}Índice</a>
+    <a class="nav" href="#indice">${icon('home')}${T.indice}</a>
     <span class="pg">${String(n).padStart(2, '0')} / ${String(total).padStart(2, '0')}</span>
     <span class="navs">
-      ${prevId ? `<a class="nav" href="#${prevId}">${icon('back')}Anterior</a>` : ''}
-      ${nextId ? `<a class="nav" href="#${nextId}">Siguiente${icon('arrow')}</a>` : ''}
+      ${prevId ? `<a class="nav" href="#${prevId}">${icon('back')}${T.ant}</a>` : ''}
+      ${nextId ? `<a class="nav" href="#${nextId}">${T.sig}${icon('arrow')}</a>` : ''}
     </span>
   </footer>`;
 }
@@ -110,23 +136,23 @@ pages.push(`<section class="page cover" id="portada">
   <div class="cover-in">
     ${brand('big')}
     <h1>${esc(empresa.titular || 'Soluciones integrales para la industria')}</h1>
-    ${empresa.lema ? `<p class="lema">${esc(empresa.lema)}</p>` : pendiente('Lema / frase de la empresa')}
+    ${empresa.lema ? `<p class="lema">${esc(empresa.lema)}</p>` : pendiente(T.lema)}
     <div class="chips">${enIndice.map((s) => `<a href="#${s.id}" class="chip">${esc(s.titulo)}</a>`).join('')}</div>
-    <div class="ctas"><a class="cta big" href="#modelo">Conoce nuestro modelo ${icon('arrow')}</a><a class="cta big ghost" href="#indice">Ver servicios</a></div>
+    <div class="ctas"><a class="cta big" href="#modelo">${T.modelo} ${icon('arrow')}</a><a class="cta big ghost" href="#indice">${T.verServ}</a></div>
   </div>
 </section>`);
 
 // 2. Modelo integrador
 const sumarseHref = contacto.whatsapp
-  ? `https://wa.me/${intl(contacto.whatsapp)}?text=${encodeURIComponent(`Hola ${empresa.nombre}, soy proveedor local y me interesa sumarme a su red.`)}`
+  ? `https://wa.me/${intl(contacto.whatsapp)}?text=${encodeURIComponent(T.sumarse(empresa.nombre))}`
   : '#contacto';
 pages.push(`<section class="page modelo" id="modelo">
-  <header class="ph"><span class="kicker">Modelo integrador</span><h2>${esc(modelo.titulo)}</h2></header>
+  <header class="ph"><span class="kicker">${T.kicker}</span><h2>${esc(modelo.titulo)}</h2></header>
   <p class="intro">${esc(modelo.intro)}</p>
   <div class="flow">${modelo.flujo
     .map((f, k) => `<div class="fnode ${k === 1 ? 'hub' : ''}">${k === 1 && iconoSrc ? `<img src="${iconoSrc}" alt="">` : ''}<b>${esc(f.titulo)}</b><span>${esc(f.texto)}</span></div>`)
     .join(`<div class="farrow">${icon('arrow')}</div>`)}</div>
-  <h3 class="gt">Lo que gana tu área de compras</h3>
+  <h3 class="gt">${T.gana}</h3>
   <div class="bens">${modelo.beneficios
     .map((b) => `<div class="ben"><span class="bi">${icon(b.icono)}</span><b>${esc(b.titulo)}</b><p>${esc(b.texto)}</p></div>`)
     .join('')}</div>
@@ -139,8 +165,8 @@ pages.push(`<section class="page modelo" id="modelo">
 
 // 3. Índice
 pages.push(`<section class="page index" id="indice">
-  <header class="ph"><h2>Nuestros servicios</h2><p>Toca cualquier servicio para ir directo a su sección.</p></header>
-  ${empresa.descripcion ? `<p class="about">${esc(empresa.descripcion)}</p>` : pendiente('Descripción breve de la empresa (quiénes somos)')}
+  <header class="ph"><h2>${T.servicios}</h2><p>${T.toca}</p></header>
+  ${empresa.descripcion ? `<p class="about">${esc(empresa.descripcion)}</p>` : pendiente(T.descEmp)}
   <div class="grid-idx">
     ${enIndice
       .map(
@@ -153,7 +179,7 @@ pages.push(`<section class="page index" id="indice">
       )
       .join('')}
   </div>
-  <a class="cta" href="#contacto">${icon('phone')} Contáctanos</a>
+  <a class="cta" href="#contacto">${icon('phone')} ${T.contacto}</a>
   ${footer(3, 'modelo', secciones[0].id)}
 </section>`);
 
@@ -192,15 +218,15 @@ secciones.forEach((s, i) => {
     </header>
     ${foto ? `<img class="hero" src="${foto}" alt="">` : s.ilustracion ? `<div class="sec-ill">${ilus(s.ilustracion)}</div>` : ''}
     <div class="body">
-      ${s.descripcion ? `<p class="desc">${esc(s.descripcion)}</p>` : cont ? '' : pendiente('Descripción del servicio')}
+      ${s.descripcion ? `<p class="desc">${esc(s.descripcion)}</p>` : cont ? '' : pendiente(T.descServ)}
       ${(s.destacados || []).length ? `<div class="badges">${s.destacados.map((d) => `<span class="badge">${icon('check')}${esc(d)}</span>`).join('')}</div>` : ''}
       ${(s.modalidades || []).length ? `<div class="mods">${s.modalidades.map((m) => `<div class="mod">${icon(m.icono)}<span>${esc(m.texto)}</span></div>`).join('')}</div>` : ''}
       ${s.etiquetas ? `<h3 class="gt">${esc(s.etiquetas.titulo)}</h3><div class="tags">${s.etiquetas.items.map((t) => `<span class="tag">${icon('pin')}${esc(t)}</span>`).join('')}</div>` : ''}
       ${(s.pasos || []).length ? `<div class="steps">${s.pasos.map((t, k) => `<div class="step"><span>${k + 1}</span>${esc(t)}</div>`).join('')}</div>` : ''}
       ${bloques ? `<div class="blks">${bloques}</div>` : ''}
-      ${items || (cont ? '' : pendiente('Productos / variantes del servicio'))}
+      ${items || (cont ? '' : pendiente(T.prods))}
       ${lista}
-      <a class="cta" href="${esc(cotizarHref(s.titulo))}">${icon(contacto.whatsapp ? 'wa' : 'mail')} Solicitar cotización</a>
+      <a class="cta" href="${esc(cotizarHref(s.titulo))}">${icon(contacto.whatsapp ? 'wa' : 'mail')} ${T.cotizar}</a>
     </div>
     ${footer(n, prev, next)}
   </section>`);
@@ -211,29 +237,29 @@ pages.push(`<section class="page contact" id="contacto">
   <div class="cover-bg"></div>
   <div class="cover-in">
     ${brand('big')}
-    <h2>Hablemos de tu proyecto</h2>
+    <h2>${T.hablemos}</h2>
     <div class="clist">
       ${contactRows
         .map(([ic, label, val, href]) => {
-          if (!val) return BORRADOR ? `<div class="crow off">${icon(ic)}<span><small>${label}</small>pendiente</span></div>` : '';
+          if (!val) return BORRADOR ? `<div class="crow off">${icon(ic)}<span><small>${label}</small>${T.pend}</span></div>` : '';
           const inner = `${icon(ic)}<span><small>${label}</small>${esc(val)}</span>`;
           return href ? `<a class="crow" href="${esc(href)}">${inner}</a>` : `<div class="crow">${inner}</div>`;
         })
         .join('')}
     </div>
-    ${empresa.razonSocial ? `<p class="legal">${esc(empresa.razonSocial)}${empresa.rfc ? ` · RFC: ${esc(empresa.rfc)}` : ''}</p>` : ''}
-    <a class="cta big light" href="#indice">${icon('home')} Volver al índice</a>
+    ${empresa.razonSocial ? `<p class="legal">${esc(empresa.razonSocial)}${empresa.rfc ? ` · ${T.rfc}: ${esc(empresa.rfc)}` : ''}</p>` : ''}
+    <a class="cta big light" href="#indice">${icon('home')} ${T.volver}</a>
   </div>
   ${footer(total, secciones[secciones.length - 1].id, null)}
 </section>`);
 
-const html = `<!doctype html><html lang="es"><head><meta charset="utf-8">
-<title>${esc(empresa.nombre)} – Brochure de servicios</title>
+const html = `<!doctype html><html lang="${T.lang}"><head><meta charset="utf-8">
+<title>${esc(empresa.nombre)} – ${T.titulo}</title>
 <style>${fs.readFileSync(path.join(DIR, 'styles.css'), 'utf8')}</style></head>
 <body>${pages.join('\n')}</body></html>`;
 
 (async () => {
-  const outName = BORRADOR ? 'plasticycle-brochure-borrador' : 'plasticycle-brochure';
+  const outName = (BORRADOR ? 'plasticycle-brochure-borrador' : 'plasticycle-brochure') + (EN ? '-en' : '');
   fs.writeFileSync(path.join(DIR, `${outName}.html`), html);
   const browser = await chromium.launch();
   const page = await browser.newPage();
@@ -247,5 +273,5 @@ const html = `<!doctype html><html lang="es"><head><meta charset="utf-8">
     outline: true,
   });
   await browser.close();
-  console.log(`OK -> ${outName}.pdf (${total} páginas)`);
+  console.log(`OK -> ${outName}.pdf (${total} ${T.pags})`);
 })();

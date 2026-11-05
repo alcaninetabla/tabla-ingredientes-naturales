@@ -1,0 +1,677 @@
+{
+  "empresa": {
+    "nombre": "PlastiCycle BJX",
+    "razonSocial": "PLASTICYCLE BJX S.A. DE C.V.",
+    "rfc": "PBJ2302176XA",
+    "lema": "An industrial solutions integrator in Mexico's Bajío region: recycling, packaging, supplies, logistics and services, through a single point of contact.",
+    "descripcion": "We are an integrator company created to deliver solutions to industry in the Bajío region. Through our network of certified local suppliers and strategic alliances, we bring together in a single business relationship what your company currently buys from many.",
+    "logoIcono": "assets/logo-icono.png",
+    "logo": "",
+    "titular": "One supplier for everything your plant needs"
+  },
+  "contacto": {
+    "whatsapp": "479 221 4882",
+    "telefono": "",
+    "email": "ceogroupmx@gmail.com",
+    "web": "",
+    "direcciones": [
+      {
+        "etiqueta": "Offices",
+        "direccion": "Calle Mayagüez 115, Col. El Palote, León, Gto. C.P. 37130"
+      },
+      {
+        "etiqueta": "Pallet plant",
+        "direccion": "Calle Pino #79, Col. La Patiña, León, Gto. C.P. 37696"
+      }
+    ],
+    "horario": ""
+  },
+  "modelo": {
+    "titulo": "One supplier. An entire network working for your company.",
+    "intro": "Sourcing supplies and services for a plant means onboarding, evaluating and coordinating dozens of suppliers. As an integrator, we do that work for you: your purchasing team deals with a single supplier, and we coordinate our network of manufacturers, specialists and partners across the region.",
+    "flujo": [
+      {
+        "titulo": "Your company",
+        "texto": "One request, one purchase order, one contact"
+      },
+      {
+        "titulo": "PlastiCycle BJX",
+        "texto": "We quote, coordinate, deliver and invoice"
+      },
+      {
+        "titulo": "Our network",
+        "texto": "Certified local suppliers and strategic partners"
+      }
+    ],
+    "beneficios": [
+      {
+        "icono": "check",
+        "titulo": "Single supplier onboarding",
+        "texto": "No need to register, evaluate and follow up with multiple suppliers."
+      },
+      {
+        "icono": "phone",
+        "titulo": "Single point of contact",
+        "texto": "Quotes, orders and deliveries across categories handled by one team."
+      },
+      {
+        "icono": "box",
+        "titulo": "Documentation in order",
+        "texto": "A formal business relationship with proper invoicing and paperwork."
+      },
+      {
+        "icono": "truck",
+        "titulo": "Logistics backing",
+        "texto": "Our own fleet, scheduled pickups and deliveries, and warehouse space."
+      },
+      {
+        "icono": "leaf",
+        "titulo": "Environmental commitment",
+        "texto": "Zero-landfill recycling and reuse processes that strengthen your corporate image."
+      },
+      {
+        "icono": "pin",
+        "titulo": "Local talent",
+        "texto": "Bajío suppliers with the responsiveness and proximity your operation needs."
+      }
+    ],
+    "aliados": {
+      "titulo": "We team up with local businesses",
+      "texto": "We bring small and mid-sized regional companies into our network and give them logistics, financial and documentation support so they can serve large corporations. This is how we connect local talent with industry, with the formality your purchasing team requires.",
+      "cta": "Are you a local supplier? Join our network"
+    }
+  },
+  "secciones": [
+    {
+      "id": "scrap",
+      "titulo": "Scrap purchasing",
+      "subtitulo": "We buy your industrial waste",
+      "icono": "recycle",
+      "descripcion": "We buy your scrap responsibly: nothing ever goes to landfill. We help you avoid environmental impact, disposal costs and waste manifests, while building a recycling culture through our reuse processes.",
+      "items": [
+        {
+          "nombre": "Plastics",
+          "detalle": "",
+          "ilustracion": "plasticos"
+        },
+        {
+          "nombre": "Textiles",
+          "detalle": "",
+          "ilustracion": "textiles"
+        },
+        {
+          "nombre": "Wood",
+          "detalle": "",
+          "ilustracion": "madera"
+        },
+        {
+          "nombre": "Metals",
+          "detalle": "",
+          "ilustracion": "metales"
+        }
+      ],
+      "destacados": [],
+      "pasos": [
+        "We quote the material",
+        "We define the logistics plan",
+        "We send you a purchase offer"
+      ],
+      "lista": {
+        "titulo": "Benefits for your company",
+        "items": [
+          "You avoid creating environmental impact.",
+          "You avoid disposal costs and waste manifests.",
+          "Purchase-sale without reclassifying materials as scrap; only their value is adjusted for invoicing.",
+          "A recycling culture through our reuse processes.",
+          "You improve your corporate image."
+        ]
+      }
+    },
+    {
+      "id": "tarimas",
+      "titulo": "Wooden pallets, boxes and crates",
+      "subtitulo": "Custom manufacturing and purchasing",
+      "icono": "pallet",
+      "imagen": "assets/tarima.jpg",
+      "descripcion": "We manufacture new and recycled wooden pallets in any size and to any specification. 14 years of experience in custom pallet manufacturing, collection, transportation, sorting, and the purchase, sale and reuse of recycled pallets.",
+      "destacados": [
+        "HT (heat treatment)",
+        "Fumigation",
+        "Notching",
+        "Serial numbering",
+        "Stamps",
+        "Up to 1,400 pallets per day"
+      ],
+      "grupos": [
+        {
+          "titulo": "Products",
+          "items": [
+            {
+              "nombre": "Custom pallets",
+              "detalle": "New and recycled wood, in different sizes"
+            },
+            {
+              "nombre": "Boxes and crates",
+              "detalle": "Made to measure"
+            },
+            {
+              "nombre": "Special packaging projects",
+              "detalle": "Dunnage, boxes, etc. Custom developed"
+            },
+            {
+              "nombre": "Recycled pallet trading",
+              "detalle": "Collection, transportation, sorting and reuse"
+            }
+          ]
+        },
+        {
+          "titulo": "Materials",
+          "items": [
+            {
+              "nombre": "Pine wood",
+              "detalle": "New or recycled, special grade"
+            },
+            {
+              "nombre": "Components",
+              "detalle": "Blocks, slats, stringers and plywood"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "planta",
+      "enIndice": false,
+      "titulo": "Our pallet plant",
+      "subtitulo": "Capacity, equipment and certifications",
+      "icono": "warehouse",
+      "imagen": "assets/tarimas-camion.jpg",
+      "destacados": [
+        "SEMARNAT authorization – NOM-144 phytosanitary treatment for export",
+        "Heat treatment authorization and HT-641 stamps"
+      ],
+      "bloques": [
+        {
+          "titulo": "Machinery and equipment",
+          "texto": "Pneumatic nailers, assembly bars and tables, saw benches, heat treatment kiln, fumigation unit, die cutters, forklifts, trucks from 3.5 to 8 tons, dry vans and flatbeds."
+        },
+        {
+          "titulo": "Staff and controls",
+          "texto": "Trained staff familiar with work in the manufacturing industry. Routine fumigation and disinfection control at our facilities."
+        }
+      ],
+      "lista": {
+        "titulo": "Why us?",
+        "items": [
+          "Years of experience in the industry.",
+          "High capacity and fast manufacturing.",
+          "Same-day scheduled deliveries, safety stock.",
+          "Reliable material supply and sourcing.",
+          "Financial capacity and documentation in order.",
+          "Backed by clients we have served for years."
+        ]
+      }
+    },
+    {
+      "id": "trapo",
+      "titulo": "Industrial rags",
+      "subtitulo": "Cleaning for industry",
+      "icono": "rag",
+      "descripcion": "Continuous supply of rags and cleaning textiles for maintenance, production and workshops, with scheduled deliveries across the Bajío.",
+      "items": [
+        {
+          "nombre": "Cotton rags",
+          "detalle": "New and pre-washed"
+        },
+        {
+          "nombre": "T-shirt rags",
+          "detalle": ""
+        },
+        {
+          "nombre": "Sheeting rags",
+          "detalle": ""
+        },
+        {
+          "nombre": "Flat cotton rags",
+          "detalle": ""
+        },
+        {
+          "nombre": "Microfiber",
+          "detalle": ""
+        },
+        {
+          "nombre": "Terry and industrial towels",
+          "detalle": ""
+        },
+        {
+          "nombre": "Cotton waste (estopa)",
+          "detalle": ""
+        },
+        {
+          "nombre": "Wet wipes in buckets",
+          "detalle": "For degreasing and disinfecting"
+        }
+      ],
+      "destacados": [
+        "Continuous stock",
+        "1–2 day delivery in the Bajío"
+      ],
+      "ilustracion": "trapo"
+    },
+    {
+      "id": "industrial",
+      "titulo": "Strapping and custom boxes",
+      "subtitulo": "Shipping supplies",
+      "icono": "box",
+      "descripcion": "Supplies to secure and ship your product. We make boxes custom-fitted to your part from just 20 units, with no large-volume requirements.",
+      "items": [
+        {
+          "nombre": "Strapping",
+          "detalle": "",
+          "ilustracion": "fleje"
+        },
+        {
+          "nombre": "Special custom boxes",
+          "detalle": "Minimum order: 20 units",
+          "ilustracion": "caja"
+        }
+      ],
+      "destacados": [
+        "Custom boxes: minimum order 20 units"
+      ]
+    },
+    {
+      "id": "empaque",
+      "titulo": "Packaging materials",
+      "subtitulo": "Film, bags and tapes",
+      "icono": "roll",
+      "descripcion": "Consolidate your packaging consumables into a single order: film, bags and tapes, in recycled options to reduce your environmental footprint, or virgin material to your specification.",
+      "items": [
+        {
+          "nombre": "Stretch film",
+          "detalle": "",
+          "ilustracion": "playo"
+        },
+        {
+          "nombre": "Packaging bags",
+          "detalle": "Recycled and virgin",
+          "ilustracion": "bolsaEmpaque"
+        },
+        {
+          "nombre": "Trash bags",
+          "detalle": "",
+          "ilustracion": "bolsaBasura"
+        },
+        {
+          "nombre": "Packing tape",
+          "detalle": "",
+          "ilustracion": "cinta"
+        },
+        {
+          "nombre": "Double-sided tape",
+          "detalle": "",
+          "ilustracion": "dobleCara"
+        }
+      ],
+      "destacados": [
+        "Recycled and virgin options"
+      ]
+    },
+    {
+      "id": "limpieza",
+      "titulo": "Cleaning products",
+      "subtitulo": "Cleaning and safety supplies",
+      "icono": "spray",
+      "descripcion": "Cleaning supplies and safety equipment for your plant, on the same purchase order as the rest of your consumables.",
+      "items": [
+        {
+          "nombre": "Cleaning supplies",
+          "detalle": "",
+          "ilustracion": "limpieza"
+        },
+        {
+          "nombre": "Safety equipment",
+          "detalle": "",
+          "ilustracion": "seguridad"
+        }
+      ],
+      "destacados": []
+    },
+    {
+      "id": "ecommerce",
+      "titulo": "E-commerce purchasing",
+      "subtitulo": "We buy on online platforms on your company's behalf",
+      "icono": "cart",
+      "descripcion": "For companies whose internal and operational processes don't allow them to simply buy on Amazon or other platforms: we place the order, deliver it and invoice your company, passing through only the VAT (IVA) on the purchase-sale transaction.",
+      "items": [
+        {
+          "nombre": "Amazon",
+          "detalle": "",
+          "ilustracion": "amazon"
+        },
+        {
+          "nombre": "MercadoLibre",
+          "detalle": "",
+          "ilustracion": "mercadolibre"
+        },
+        {
+          "nombre": "Other platforms",
+          "detalle": "",
+          "ilustracion": "otras"
+        }
+      ],
+      "destacados": [
+        "Invoiced to your company",
+        "Only the transaction VAT is passed through"
+      ],
+      "pasos": [
+        "We place the order for you",
+        "We deliver to your company",
+        "We invoice your company"
+      ],
+      "ilustracion": "ecommerce"
+    },
+    {
+      "id": "transporte",
+      "titulo": "Local transportation",
+      "subtitulo": "",
+      "icono": "truck",
+      "descripcion": "Local and long-distance moves with a fleet of different capacities, for pickups, scheduled deliveries and full-load shipments.",
+      "items": [
+        {
+          "nombre": "53-ft Full",
+          "detalle": "Double trailer",
+          "ilustracion": "full"
+        },
+        {
+          "nombre": "Semi-trailer",
+          "detalle": "",
+          "ilustracion": "semi"
+        },
+        {
+          "nombre": "Flatbed",
+          "detalle": "",
+          "ilustracion": "plataforma"
+        },
+        {
+          "nombre": "Straight truck (Torton)",
+          "detalle": "",
+          "ilustracion": "torton"
+        },
+        {
+          "nombre": "Pickup truck",
+          "detalle": "",
+          "ilustracion": "pickup"
+        }
+      ],
+      "destacados": []
+    },
+    {
+      "id": "almacen",
+      "titulo": "Warehouse space rental",
+      "subtitulo": "Logistics warehouse in León, Guanajuato",
+      "icono": "warehouse",
+      "descripcion": "In alliance with a specialized logistics operator, we offer warehouse space and logistics services for companies of any size.",
+      "items": [
+        {
+          "nombre": "Storage",
+          "detalle": "Temperature control and specialized racking"
+        },
+        {
+          "nombre": "Bonded warehouse",
+          "detalle": "Import and storage of goods for up to 24 months"
+        },
+        {
+          "nombre": "Value-added services",
+          "detalle": "Palletizing, strapping and packaging"
+        },
+        {
+          "nombre": "Inventory management",
+          "detalle": ""
+        }
+      ],
+      "destacados": [],
+      "ilustracion": "almacen"
+    },
+    {
+      "id": "aduanal",
+      "titulo": "Customs brokerage and foreign trade",
+      "subtitulo": "Hassle-free imports and exports",
+      "icono": "globe",
+      "descripcion": "Through our alliance with a foreign trade services agency with more than 20 years of experience, we deliver smooth logistics operations and tax and legal certainty for your imports and exports, so your team can focus on day-to-day operations.",
+      "destacados": [
+        "Own customs broker license",
+        "20+ years of experience",
+        "Tax and legal certainty"
+      ],
+      "modalidades": [
+        {
+          "icono": "web",
+          "texto": "Multimodal"
+        },
+        {
+          "icono": "plane",
+          "texto": "Air"
+        },
+        {
+          "icono": "ship",
+          "texto": "Ocean"
+        },
+        {
+          "icono": "truck",
+          "texto": "Ground"
+        }
+      ],
+      "etiquetas": {
+        "titulo": "Customs clearance: presence at Mexico's main customs ports",
+        "items": [
+          "Manzanillo",
+          "Veracruz",
+          "Mexico City Airport (AICM)",
+          "Querétaro",
+          "Guanajuato",
+          "Nuevo Laredo",
+          "Guadalajara",
+          "Altamira",
+          "Lázaro Cárdenas",
+          "Laredo, TX"
+        ]
+      },
+      "grupos": [
+        {
+          "titulo": "Advisory and management",
+          "items": [
+            {
+              "nombre": "Foreign trade advisory and consulting",
+              "detalle": "To reduce duty and tax costs"
+            },
+            {
+              "nombre": "Supplier audits and inspections at origin",
+              "detalle": "Facilities, legal registration, processes, quality and warehouses, for a secure purchase"
+            },
+            {
+              "nombre": "Import business development",
+              "detalle": "Step-by-step guidance to import from Asia and anywhere in the world"
+            },
+            {
+              "nombre": "Government permits and filings",
+              "detalle": "Authorizations, certifications, permits, importer registries and quotas"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aduanal-transporte",
+      "enIndice": false,
+      "titulo": "International freight transportation",
+      "subtitulo": "Mexico · United States · Canada",
+      "icono": "globe",
+      "destacados": [
+        "C-TPAT certified units",
+        "GPS with mirror-account tracking"
+      ],
+      "items": [
+        {
+          "nombre": "Ground freight",
+          "detalle": "Mexico, United States and Canada; route specialists",
+          "ilustracion": "semi"
+        },
+        {
+          "nombre": "Ocean container drayage",
+          "detalle": "Altamira, Lázaro Cárdenas, Manzanillo and Veracruz; single and full (double) mode",
+          "ilustracion": "contenedor"
+        },
+        {
+          "nombre": "Consolidated service (LTL)",
+          "detalle": "Domestic and international, air, ocean and ground, with optimized routes"
+        },
+        {
+          "nombre": "U.S. customs broker",
+          "detalle": "Support for your imports and exports in the United States"
+        },
+        {
+          "nombre": "Warehouse in Laredo, TX",
+          "detalle": "Storage plus loading and unloading"
+        },
+        {
+          "nombre": "Parcel service",
+          "detalle": "Small packages from any origin to their final destination"
+        },
+        {
+          "nombre": "Trading company",
+          "detalle": "General and textile-sector importer registries to clear your goods"
+        }
+      ]
+    },
+    {
+      "id": "viajes",
+      "titulo": "Corporate travel and events",
+      "subtitulo": "Corporate lodging and event planning",
+      "icono": "plane",
+      "imagen": "assets/eventos.jpg",
+      "descripcion": "Business travel: end-to-end lodging management for companies, work teams and event organizers, with nationwide coverage.",
+      "destacados": [
+        "Time and cost savings",
+        "Exclusive rates through strategic alliances",
+        "Nationwide coverage",
+        "10+ years of experience in the hotel sector"
+      ],
+      "grupos": [
+        {
+          "titulo": "Services",
+          "items": [
+            {
+              "nombre": "Lodging",
+              "detalle": "Hotel selection based on each event's profile"
+            },
+            {
+              "nombre": "Events",
+              "detalle": "Planning and selection of meeting rooms and venues, from planning through execution and follow-up"
+            },
+            {
+              "nombre": "Negotiation",
+              "detalle": "With hotels and vendors to secure better rates, terms and availability"
+            },
+            {
+              "nombre": "Personalized service",
+              "detalle": "We work with you to understand your needs and preferences"
+            }
+          ]
+        }
+      ],
+      "lista": {
+        "titulo": "We manage lodging for",
+        "items": [
+          "Conferences and conventions",
+          "Trade shows and exhibitions",
+          "Corporate events",
+          "Temporary projects in other cities",
+          "Group business trips"
+        ]
+      }
+    },
+    {
+      "id": "agua",
+      "titulo": "Water treatment",
+      "subtitulo": "Treatment plants, equipment and services",
+      "icono": "drop",
+      "descripcion": "We operate and maintain your treatment plant and supply equipment and consumables, so your team can focus on production.",
+      "destacados": [
+        "Biological and physicochemical WWTPs",
+        "12- or 24-hour operation plans"
+      ],
+      "grupos": [
+        {
+          "titulo": "Services",
+          "items": [
+            {
+              "nombre": "Wastewater treatment plant (WWTP) operation",
+              "detalle": "Biological and physicochemical, 12- or 24-hour plans"
+            },
+            {
+              "nombre": "WWTP maintenance",
+              "detalle": "Preventive and corrective"
+            },
+            {
+              "nombre": "Chemical treatment",
+              "detalle": "For cooling towers and boilers"
+            },
+            {
+              "nombre": "Equipment installation",
+              "detalle": ""
+            },
+            {
+              "nombre": "On-site physicochemical analysis",
+              "detalle": ""
+            },
+            {
+              "nombre": "Hydraulic upgrades",
+              "detalle": ""
+            }
+          ]
+        },
+        {
+          "titulo": "Equipment and consumables",
+          "items": [
+            {
+              "nombre": "Reverse osmosis",
+              "detalle": "Membranes and systems"
+            },
+            {
+              "nombre": "Water softening systems",
+              "detalle": "Plus valves for treatment systems"
+            },
+            {
+              "nombre": "Hydropneumatic tanks and disc filters",
+              "detalle": ""
+            },
+            {
+              "nombre": "Filter media",
+              "detalle": "Activated carbon, silica sand, gravel, anthracite, garnet, greensand and ion exchange resins"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "energia",
+      "titulo": "Electrical installations and solar panels",
+      "subtitulo": "",
+      "icono": "sun",
+      "descripcion": "Electrical installations and solar panel systems for your plant, within the same business relationship.",
+      "items": [
+        {
+          "nombre": "Electrical installations",
+          "detalle": ""
+        },
+        {
+          "nombre": "Solar panels",
+          "detalle": ""
+        }
+      ],
+      "destacados": [],
+      "ilustracion": "energia"
+    }
+  ]
+}

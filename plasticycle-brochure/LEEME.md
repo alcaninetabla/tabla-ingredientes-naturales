@@ -14,3 +14,7 @@ Colores de marca: variables al inicio de `styles.css`.
 ## Generar
     node build.js            # plasticycle-brochure.pdf (final, oculta campos vacíos)
     node build.js --borrador # plasticycle-brochure-borrador.pdf (marca lo pendiente en amarillo)
+    node build.js --en       # plasticycle-brochure-en.pdf (versión en inglés, usa content.en.json)
+
+Versión en inglés: el texto está en `content.en.json` (misma estructura que `content.json`).
+Al cambiar contenido en español, actualiza también el archivo en inglés.
