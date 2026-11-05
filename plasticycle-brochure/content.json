@@ -1,0 +1,142 @@
+{
+  "empresa": {
+    "nombre": "PlastiCycle",
+    "lema": "",
+    "descripcion": "",
+    "logo": ""
+  },
+  "contacto": {
+    "whatsapp": "",
+    "telefono": "",
+    "email": "",
+    "web": "",
+    "direccion": "",
+    "horario": ""
+  },
+  "secciones": [
+    {
+      "id": "scrap",
+      "titulo": "Compra de scrap",
+      "subtitulo": "Compramos tus residuos industriales",
+      "icono": "recycle",
+      "descripcion": "",
+      "items": [
+        { "nombre": "Plásticos", "detalle": "" },
+        { "nombre": "Textiles", "detalle": "" },
+        { "nombre": "Madera", "detalle": "" },
+        { "nombre": "Metales", "detalle": "" }
+      ],
+      "destacados": []
+    },
+    {
+      "id": "tarimas",
+      "titulo": "Tarimas, cajas y huacales de madera",
+      "subtitulo": "Fabricación y compra a medida",
+      "icono": "pallet",
+      "descripcion": "",
+      "items": [
+        { "nombre": "Tarimas de madera a medida", "detalle": "Fabricación y compra" },
+        { "nombre": "Cajas de madera", "detalle": "" },
+        { "nombre": "Huacales", "detalle": "" }
+      ],
+      "destacados": [
+        "HT (tratamiento térmico)",
+        "Certificado de fumigación",
+        "Madera nueva",
+        "Madera reciclada"
+      ]
+    },
+    {
+      "id": "industrial",
+      "titulo": "Suministros industriales",
+      "subtitulo": "Trapo, fleje y cajas a medida",
+      "icono": "box",
+      "descripcion": "",
+      "items": [
+        { "nombre": "Trapo industrial", "detalle": "" },
+        { "nombre": "Fleje", "detalle": "" },
+        { "nombre": "Cajas a medida especial", "detalle": "Orden mínima desde 20 piezas" }
+      ],
+      "destacados": ["Cajas a medida: orden mínima desde 20 piezas"]
+    },
+    {
+      "id": "empaque",
+      "titulo": "Material de empaque",
+      "subtitulo": "Película, bolsas y cintas",
+      "icono": "roll",
+      "descripcion": "",
+      "items": [
+        { "nombre": "Playo", "detalle": "" },
+        { "nombre": "Bolsa de empaque", "detalle": "Reciclada y virgen" },
+        { "nombre": "Bolsa para basura", "detalle": "" },
+        { "nombre": "Cinta de empaque", "detalle": "" },
+        { "nombre": "Cinta doble cara", "detalle": "" }
+      ],
+      "destacados": ["Opciones recicladas y vírgenes"]
+    },
+    {
+      "id": "limpieza",
+      "titulo": "Productos de limpieza",
+      "subtitulo": "",
+      "icono": "spray",
+      "descripcion": "",
+      "items": [],
+      "destacados": []
+    },
+    {
+      "id": "ecommerce",
+      "titulo": "Compras en e-commerce",
+      "subtitulo": "Compramos por ti en plataformas en línea",
+      "icono": "cart",
+      "descripcion": "",
+      "items": [
+        { "nombre": "Amazon", "detalle": "" },
+        { "nombre": "MercadoLibre", "detalle": "" },
+        { "nombre": "Otras plataformas", "detalle": "" }
+      ],
+      "destacados": []
+    },
+    {
+      "id": "transporte",
+      "titulo": "Transporte local",
+      "subtitulo": "",
+      "icono": "truck",
+      "descripcion": "",
+      "items": [],
+      "destacados": []
+    },
+    {
+      "id": "almacen",
+      "titulo": "Renta de espacio en almacén",
+      "subtitulo": "Almacén de logística",
+      "icono": "warehouse",
+      "descripcion": "",
+      "items": [],
+      "destacados": []
+    },
+    {
+      "id": "agua",
+      "titulo": "Tratamiento de agua",
+      "subtitulo": "Plantas de tratamiento y servicios",
+      "icono": "drop",
+      "descripcion": "",
+      "items": [
+        { "nombre": "Plantas de tratamiento", "detalle": "" },
+        { "nombre": "Servicios para tratamiento de agua", "detalle": "" }
+      ],
+      "destacados": []
+    },
+    {
+      "id": "energia",
+      "titulo": "Instalaciones eléctricas y paneles solares",
+      "subtitulo": "",
+      "icono": "sun",
+      "descripcion": "",
+      "items": [
+        { "nombre": "Instalaciones eléctricas", "detalle": "" },
+        { "nombre": "Paneles solares", "detalle": "" }
+      ],
+      "destacados": []
+    }
+  ]
+}

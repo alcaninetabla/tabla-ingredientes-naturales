@@ -1,0 +1,126 @@
+/* Paleta de marca: ajustar aquí cuando se tengan los colores oficiales */
+:root {
+  --verde: #0f4c3a;
+  --verde-2: #136f52;
+  --lima: #8cc63f;
+  --lima-claro: #eef7e2;
+  --tinta: #1d2a25;
+  --gris: #5c6b65;
+  --linea: #dfe7e2;
+  --fondo: #f7faf8;
+}
+@page { size: Letter; margin: 0; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { font-family: Inter, 'DejaVu Sans', Arial, sans-serif; color: var(--tinta); background: #fff; }
+a { color: inherit; text-decoration: none; }
+.ic { width: 1em; height: 1em; flex: none; }
+
+.page {
+  width: 8.5in; height: 11in; position: relative; overflow: hidden;
+  page-break-after: always; break-after: page; background: #fff;
+  padding: 0.6in 0.6in 0.9in;
+}
+.page:last-child { page-break-after: auto; break-after: auto; }
+
+/* ---------- Portada / contacto ---------- */
+.cover, .contact { background: var(--verde); color: #fff; padding: 0; }
+.cover-bg {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(circle at 85% 12%, rgba(140,198,63,.45) 0 18%, transparent 18.2%),
+    radial-gradient(circle at 92% 92%, rgba(255,255,255,.07) 0 30%, transparent 30.2%),
+    radial-gradient(circle at 5% 70%, rgba(140,198,63,.18) 0 22%, transparent 22.2%),
+    linear-gradient(160deg, var(--verde-2), var(--verde) 60%);
+}
+.cover-in { position: relative; height: 100%; padding: 1in 0.8in; display: flex; flex-direction: column; justify-content: center; gap: 28px; }
+.wordmark { display: flex; align-items: center; gap: 12px; font-weight: 800; font-size: 30px; letter-spacing: -.5px; }
+.wordmark .ic { color: var(--lima); width: 40px; height: 40px; }
+.wordmark.big { font-size: 54px; }
+.wordmark.big .ic { width: 68px; height: 68px; }
+.logo.big { max-width: 3.6in; max-height: 1.6in; object-fit: contain; align-self: flex-start; }
+.cover h1 { font-size: 38px; line-height: 1.15; font-weight: 700; letter-spacing: -.6px; max-width: 6.4in; }
+.contact h2 { font-size: 36px; font-weight: 700; }
+.lema { font-size: 18px; color: #d6ecd0; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; max-width: 6.8in; }
+.chip { font-size: 12px; padding: 7px 12px; border-radius: 99px; border: 1px solid rgba(255,255,255,.35); background: rgba(255,255,255,.08); }
+
+/* ---------- Botones ---------- */
+.cta {
+  display: inline-flex; align-items: center; gap: 10px; align-self: flex-start;
+  background: var(--lima); color: var(--verde); font-weight: 700; font-size: 15px;
+  padding: 12px 22px; border-radius: 10px; margin-top: 18px;
+}
+.cta .ic { width: 20px; height: 20px; }
+.cta.big { font-size: 18px; padding: 15px 28px; }
+.cta.light { background: #fff; }
+
+/* ---------- Índice ---------- */
+.ph h2 { font-size: 34px; color: var(--verde); letter-spacing: -.5px; }
+.ph p { color: var(--gris); margin-top: 6px; font-size: 14px; }
+.about { margin-top: 18px; font-size: 14px; line-height: 1.55; color: var(--tinta); }
+.index { display: flex; flex-direction: column; }
+.grid-idx { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 24px; }
+.idx {
+  display: flex; align-items: center; gap: 12px; padding: 14px 14px; min-height: 76px;
+  border: 1px solid var(--linea); border-radius: 12px; background: var(--fondo);
+}
+.idx .num { font-size: 12px; font-weight: 700; color: var(--lima); width: 20px; }
+.idx-ic { width: 40px; height: 40px; border-radius: 10px; background: var(--verde); color: var(--lima); display: grid; place-items: center; flex: none; }
+.idx-ic .ic { width: 22px; height: 22px; }
+.idx-t { flex: 1; font-size: 14px; line-height: 1.25; }
+.idx-t small { display: block; color: var(--gris); font-size: 11px; margin-top: 3px; }
+.idx .go { color: var(--verde-2); }
+
+/* ---------- Página de servicio ---------- */
+.svc { padding-top: 0; }
+.band {
+  margin: 0 -0.6in; padding: 0.55in 0.6in 0.4in; background: var(--verde); color: #fff;
+  display: flex; align-items: center; gap: 18px; position: relative;
+}
+.band::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 6px; background: var(--lima); }
+.bnum { font-size: 64px; font-weight: 800; color: rgba(140,198,63,.55); line-height: 1; }
+.bic { width: 62px; height: 62px; border-radius: 16px; background: rgba(255,255,255,.1); display: grid; place-items: center; color: var(--lima); flex: none; }
+.bic .ic { width: 36px; height: 36px; }
+.band h2 { font-size: 30px; line-height: 1.1; letter-spacing: -.4px; }
+.band p { color: #cfe6c8; margin-top: 6px; font-size: 15px; }
+.hero { display: block; width: calc(100% + 1.2in); margin: 0 -0.6in; height: 2.8in; object-fit: cover; }
+.body { padding-top: 28px; display: flex; flex-direction: column; }
+.desc { font-size: 15px; line-height: 1.6; }
+.badges { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+.badge {
+  display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600;
+  background: var(--lima-claro); color: var(--verde); padding: 8px 12px; border-radius: 8px;
+}
+.badge .ic { color: var(--verde-2); }
+.cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 22px; }
+.card { border: 1px solid var(--linea); border-left: 4px solid var(--lima); border-radius: 10px; padding: 14px 16px; background: #fff; }
+.card img { width: 100%; height: 1.4in; object-fit: cover; border-radius: 6px; margin-bottom: 10px; }
+.card h4 { display: flex; align-items: center; gap: 8px; font-size: 15px; color: var(--verde); }
+.card h4 .ic { color: var(--lima); }
+.card p { font-size: 13px; color: var(--gris); margin-top: 5px; line-height: 1.45; padding-left: 24px; }
+
+/* ---------- Contacto ---------- */
+.clist { display: grid; gap: 10px; max-width: 5.6in; }
+.crow { display: flex; align-items: center; gap: 14px; padding: 12px 16px; border-radius: 12px; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.18); font-size: 16px; }
+.crow .ic { width: 24px; height: 24px; color: var(--lima); }
+.crow small { display: block; font-size: 11px; color: #bfdcb8; text-transform: uppercase; letter-spacing: .6px; }
+.crow.off { opacity: .55; font-style: italic; }
+
+/* ---------- Pie con navegación ---------- */
+.foot {
+  position: absolute; left: 0.6in; right: 0.6in; bottom: 0.35in;
+  display: flex; align-items: center; justify-content: space-between;
+  border-top: 1px solid var(--linea); padding-top: 10px; font-size: 12px; color: var(--gris);
+}
+.contact .foot { border-color: rgba(255,255,255,.2); color: #cfe6c8; }
+.navs { display: flex; gap: 16px; }
+.nav { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; color: var(--verde-2); }
+.contact .nav { color: #fff; }
+.pg { font-variant-numeric: tabular-nums; letter-spacing: 1px; }
+
+/* ---------- Marcas de borrador ---------- */
+.pend {
+  margin-top: 16px; padding: 14px 16px; border: 2px dashed #e0a800; border-radius: 10px;
+  background: #fff8e1; color: #8a6400; font-size: 13px; font-weight: 600;
+}
+.cover .pend { background: rgba(255,248,225,.15); color: #ffe082; border-color: #ffe082; }
