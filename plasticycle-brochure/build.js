@@ -34,6 +34,8 @@ const ICONS = {
   roll: '<ellipse cx="7" cy="12" rx="4" ry="8"/><ellipse cx="7" cy="12" rx="1.3" ry="2.6"/><path d="M7 4h11v13l-3-1-3 1-3-1-2 3"/>',
   plane: '<path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/>',
   rag: '<path d="M4 6c3-2 5 1 8-1s5 0 8-1v12c-3 1-5-1-8 1s-5-1-8 1z"/><path d="M8 9.5c2-.8 3 .4 5-.4M8 13c2-.8 3 .4 5-.4"/>',
+  globe: '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/><path d="M17 17l4 4"/>',
+  ship: '<path d="M3 15h18l-3 5H6z"/><path d="M6 15V9h12v6M9 9V5h6v4"/><path d="M2 21c2 0 2-1 4-1s2 1 4 1 2-1 4-1 2 1 4 1 2-1 4-1"/>',
   spray: '<path d="M8 10h6v11H8zM9 10V7h4v3M13 7h3l2-2M9 7l-2-2h6"/><path d="M19 9h2M19 12h2M18.5 6l1.5-1.5"/>',
   cart: '<circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.7 12.4a1.5 1.5 0 0 0 1.5 1.1h8.6a1.5 1.5 0 0 0 1.5-1.1L21 7H6"/>',
   truck: '<path d="M2 5h12v11H2zM14 9h4l4 4v3h-8z"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/>',
@@ -192,6 +194,8 @@ secciones.forEach((s, i) => {
     <div class="body">
       ${s.descripcion ? `<p class="desc">${esc(s.descripcion)}</p>` : cont ? '' : pendiente('Descripción del servicio')}
       ${(s.destacados || []).length ? `<div class="badges">${s.destacados.map((d) => `<span class="badge">${icon('check')}${esc(d)}</span>`).join('')}</div>` : ''}
+      ${(s.modalidades || []).length ? `<div class="mods">${s.modalidades.map((m) => `<div class="mod">${icon(m.icono)}<span>${esc(m.texto)}</span></div>`).join('')}</div>` : ''}
+      ${s.etiquetas ? `<h3 class="gt">${esc(s.etiquetas.titulo)}</h3><div class="tags">${s.etiquetas.items.map((t) => `<span class="tag">${icon('pin')}${esc(t)}</span>`).join('')}</div>` : ''}
       ${(s.pasos || []).length ? `<div class="steps">${s.pasos.map((t, k) => `<div class="step"><span>${k + 1}</span>${esc(t)}</div>`).join('')}</div>` : ''}
       ${bloques ? `<div class="blks">${bloques}</div>` : ''}
       ${items || (cont ? '' : pendiente('Productos / variantes del servicio'))}

@@ -180,3 +180,12 @@ a { color: inherit; text-decoration: none; }
 .ally h3 { font-size: 20px; color: var(--lima); }
 .ally p { font-size: 13px; line-height: 1.55; margin-top: 8px; color: #ecebe4; }
 .ally .cta { margin-top: 12px; font-size: 13px; padding: 10px 16px; }
+
+/* ---------- Modalidades y etiquetas ---------- */
+.mods { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 16px; }
+.mod { display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 12px 6px; border-radius: 10px; background: var(--verde); color: #fff; font-size: 13px; font-weight: 700; }
+.mod .ic { width: 28px; height: 28px; color: var(--lima); }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+.tag { display: inline-flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 600; padding: 6px 10px; border-radius: 99px; border: 1px solid var(--linea); background: var(--fondo); color: var(--verde); }
+.tag .ic { color: var(--verde-2); }
+.ill svg[viewBox="0 0 240 90"] { height: 0.85in; }

@@ -88,5 +88,53 @@ const ILUS = {
     <path d="M112 90l26-40 8 6-24 34z" fill="#d08b3c"/><path d="M118 90l26-40" stroke="#a96a26" stroke-width="2"/>`,
 };
 
+
+// ---------- Unidades de transporte (vista lateral, viewBox 240x90) ----------
+const piso = '<path d="M0 80h240" stroke="#d9d6c8" stroke-width="2"/>';
+const rueda = (x) => `<circle cx="${x}" cy="72" r="8" fill="${D}"/><circle cx="${x}" cy="72" r="3.5" fill="#b8bec4"/>`;
+const tracto = (x) => `<path d="M${x} 68V36h30l22 16v16z" fill="${G}"/><path d="M${x + 6} 40h21l13 10h-34z" fill="${C}"/><rect x="${x - 4}" y="64" width="58" height="5" fill="${D}"/>${rueda(x + 12)}${rueda(x + 42)}`;
+const TRUCKS = {
+  pickup: `${piso}<path d="M50 68V48h70V34h32l18 14h14c4 0 6 3 6 6v14z" fill="${G}"/><path d="M126 38h24l12 10h-36z" fill="${C}"/><path d="M50 48h70" stroke="${L}" stroke-width="3"/>${rueda(78)}${rueda(166)}`,
+  torton: `${piso}<rect x="24" y="16" width="128" height="50" rx="2" fill="${W}" stroke="#d9d6c8" stroke-width="2"/><path d="M24 54h128" stroke="${L}" stroke-width="4"/><path d="M154 68V34h28l20 16v18z" fill="${G}"/><path d="M160 38h20l12 10h-32z" fill="${C}"/>${rueda(186)}<rect x="24" y="64" width="130" height="5" fill="${D}"/>${rueda(44)}${rueda(64)}`,
+  semi: `${piso}<rect x="6" y="14" width="160" height="50" rx="2" fill="${W}" stroke="#d9d6c8" stroke-width="2"/><path d="M6 52h160" stroke="${L}" stroke-width="4"/><rect x="6" y="62" width="160" height="4" fill="${D}"/>${rueda(120)}${rueda(140)}${tracto(176)}<text x="86" y="40" text-anchor="middle" font-family="Inter,sans-serif" font-weight="800" font-size="16" fill="${G}">53'</text>`,
+  full: `${piso}<rect x="2" y="22" width="88" height="42" rx="2" fill="${W}" stroke="#d9d6c8" stroke-width="2"/><rect x="96" y="22" width="88" height="42" rx="2" fill="${W}" stroke="#d9d6c8" stroke-width="2"/><path d="M2 54h88M96 54h88" stroke="${L}" stroke-width="4"/><rect x="2" y="62" width="182" height="4" fill="${D}"/>${rueda(20)}${rueda(70)}${rueda(112)}${rueda(162)}${tracto(190).replace('M190 68V36h30l22 16v16z','M190 68V36h28l20 16v16z')}<text x="46" y="46" text-anchor="middle" font-family="Inter,sans-serif" font-weight="800" font-size="13" fill="${G}">FULL</text><text x="140" y="46" text-anchor="middle" font-family="Inter,sans-serif" font-weight="800" font-size="13" fill="${G}">53'</text>`,
+  contenedor: `${piso}<rect x="8" y="18" width="156" height="44" fill="#c0504d"/>${[...Array(12)].map((_, i) => `<path d="M${18 + i * 12} 22v36" stroke="#a63f3c" stroke-width="3"/>`).join('')}<rect x="6" y="62" width="160" height="4" fill="${D}"/>${rueda(120)}${rueda(140)}${tracto(176)}`,
+  plataforma: `${piso}<rect x="6" y="56" width="160" height="7" fill="${D}"/><rect x="14" y="30" width="34" height="26" fill="${K}"/><rect x="52" y="36" width="34" height="20" fill="${K2}"/><rect x="90" y="26" width="34" height="30" fill="${K}"/><rect x="128" y="38" width="32" height="18" fill="${K3}"/><path d="M14 40h34M90 38h34" stroke="${K2}" stroke-width="2"/>${rueda(120)}${rueda(140)}${tracto(176)}`,
+};
+
+// ---------- Escenas anchas (viewBox 320x100) ----------
+const ESCENAS = {
+  ecommerce: `<rect x="20" y="20" width="76" height="50" rx="4" fill="${D}"/><rect x="25" y="25" width="66" height="40" fill="${W}"/><path d="M12 72h92l-6 6H18z" fill="#5a544b"/>
+    <path d="M42 36h4l4 16h18l4-12H50" stroke="${G}" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="54" cy="58" r="2.5" fill="${G}"/><circle cx="66" cy="58" r="2.5" fill="${G}"/>
+    <path d="M114 50h30m-8-7 8 7-8 7" stroke="${L}" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M160 46l24-8 24 8v26l-24 8-24-8z" fill="${K}"/><path d="M184 54v26l24-8V46z" fill="${K2}"/><path d="M160 46l24 8 24-8" fill="none" stroke="${K2}" stroke-width="1.5"/><rect x="176" y="40" width="16" height="4" fill="${K3}"/>
+    <path d="M222 50h30m-8-7 8 7-8 7" stroke="${L}" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M262 82V44l14-10v10l14-10v10l14-10v48z" fill="${G}"/><rect x="270" y="58" width="8" height="8" fill="${W}"/><rect x="284" y="58" width="8" height="8" fill="${W}"/><rect x="270" y="70" width="22" height="12" fill="${D}"/>
+    <text x="58" y="96" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="${D}">Pedido</text><text x="184" y="96" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="${D}">Entrega</text><text x="283" y="96" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="${D}">Tu empresa</text>`,
+  almacen: `<path d="M40 88V36l120-24 120 24v52z" fill="${D}"/><path d="M60 88V44h200v44z" fill="${S}"/>
+    ${[0, 1, 2, 3].map((r) => `<rect x="${72 + r * 48}" y="48" width="4" height="40" fill="${G}"/><rect x="${108 + r * 48}" y="48" width="4" height="40" fill="${G}"/>` + [0, 1, 2].map((n) => `<rect x="${72 + r * 48}" y="${58 + n * 12}" width="40" height="2.5" fill="${G}"/><rect x="${78 + r * 48}" y="${50 + n * 12}" width="${12 + (n % 2) * 6}" height="8" fill="${K}"/><rect x="${94 + r * 48}" y="${51 + n * 12}" width="12" height="7" fill="${C2}"/>`).join('')).join('')}
+    <path d="M30 90h260" stroke="#d9d6c8" stroke-width="2"/>`,
+  energia: `<circle cx="270" cy="26" r="14" fill="#f4c20d"/><path d="M270 4v6M270 42v6M248 26h6M286 26h6M255 11l4 4M281 37l4 4M285 11l-4 4M259 37l-4 4" stroke="#f4c20d" stroke-width="3" stroke-linecap="round"/>
+    <path d="M30 90V56l70-20 70 20v34z" fill="${S}"/><path d="M24 58l76-24 76 24" stroke="${D}" stroke-width="5" fill="none"/>
+    <g transform="skewX(-20)"><rect x="70" y="40" width="34" height="16" fill="#2f5d8a"/><rect x="108" y="40" width="34" height="16" fill="#2f5d8a"/><path d="M70 48h72M87 40v16M125 40v16" stroke="#9cc3e6" stroke-width="1"/></g>
+    <rect x="86" y="68" width="28" height="22" fill="${K}"/>
+    <rect x="196" y="40" width="64" height="40" rx="4" fill="${W}" stroke="#d9d6c8" stroke-width="2"/><path d="M232 46l-12 18h10l-4 12 14-20h-10l4-10z" fill="${G}"/>
+    <path d="M176 70h20" stroke="${D}" stroke-width="3" stroke-dasharray="4 3"/><path d="M20 90h280" stroke="#d9d6c8" stroke-width="2"/>`,
+};
+
+// ---------- Plataformas (mosaicos con el nombre, no son logotipos oficiales) ----------
+const tile = (bg, fg, txt, size = 22) => `<rect x="8" y="14" width="144" height="72" rx="12" fill="${bg}"/><text x="80" y="58" text-anchor="middle" font-family="Inter,sans-serif" font-weight="800" font-size="${size}" fill="${fg}">${txt}</text>`;
+const PLATAFORMAS = {
+  amazon: tile('#232f3e', '#ffffff', 'Amazon'),
+  mercadolibre: tile('#ffe600', '#2d3277', 'MercadoLibre', 18),
+  otras: tile(S, D, 'y más…'),
+};
+
+const svg = (vb, body) => `<svg viewBox="${vb}" xmlns="http://www.w3.org/2000/svg">${body}</svg>`;
 module.exports = (k) =>
-  ILUS[k] ? `<svg viewBox="0 0 160 100" xmlns="http://www.w3.org/2000/svg">${ILUS[k]}</svg>` : '';
+  ILUS[k] ? svg('0 0 160 100', ILUS[k])
+  : PLATAFORMAS[k] ? svg('0 0 160 100', PLATAFORMAS[k])
+  : TRUCKS[k] ? svg('0 0 240 90', TRUCKS[k])
+  : ESCENAS[k] ? svg('0 0 320 100', ESCENAS[k])
+  : '';
+

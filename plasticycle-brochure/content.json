@@ -346,15 +346,18 @@
       "items": [
         {
           "nombre": "Amazon",
-          "detalle": ""
+          "detalle": "",
+          "ilustracion": "amazon"
         },
         {
           "nombre": "MercadoLibre",
-          "detalle": ""
+          "detalle": "",
+          "ilustracion": "mercadolibre"
         },
         {
           "nombre": "Otras plataformas",
-          "detalle": ""
+          "detalle": "",
+          "ilustracion": "otras"
         }
       ],
       "destacados": [
@@ -365,22 +368,40 @@
         "Hacemos el pedido por ti",
         "Lo entregamos en tu empresa",
         "Facturamos a tu empresa"
-      ]
+      ],
+      "ilustracion": "ecommerce"
     },
     {
       "id": "transporte",
       "titulo": "Transporte local",
       "subtitulo": "",
       "icono": "truck",
-      "descripcion": "Movimientos locales con unidades de 3.5 a 8 toneladas, caja seca y plataforma, para recolecciones y entregas programadas.",
+      "descripcion": "Movimientos locales y foráneos con flota de diferentes capacidades, para recolecciones, entregas programadas y embarques completos.",
       "items": [
         {
-          "nombre": "Camiones de 3.5 a 8 toneladas",
-          "detalle": ""
+          "nombre": "Full 53 pies",
+          "detalle": "Doble remolque",
+          "ilustracion": "full"
         },
         {
-          "nombre": "Caja seca y plataformas",
-          "detalle": ""
+          "nombre": "Semirremolque",
+          "detalle": "",
+          "ilustracion": "semi"
+        },
+        {
+          "nombre": "Plataforma",
+          "detalle": "",
+          "ilustracion": "plataforma"
+        },
+        {
+          "nombre": "Tórton",
+          "detalle": "",
+          "ilustracion": "torton"
+        },
+        {
+          "nombre": "Pick up",
+          "detalle": "",
+          "ilustracion": "pickup"
         }
       ],
       "destacados": []
@@ -409,7 +430,119 @@
           "detalle": ""
         }
       ],
-      "destacados": []
+      "destacados": [],
+      "ilustracion": "almacen"
+    },
+    {
+      "id": "aduanal",
+      "titulo": "Agencia aduanal y comercio exterior",
+      "subtitulo": "Importaciones y exportaciones sin contratiempos",
+      "icono": "globe",
+      "descripcion": "A través de nuestra alianza con una agencia de servicios al comercio exterior con más de 20 años de experiencia, te damos operaciones logísticas sin contratiempos y certidumbre fiscal y jurídica en tus importaciones y exportaciones, para que tu equipo se enfoque en la operación diaria.",
+      "destacados": [
+        "Patente aduanal directa",
+        "Más de 20 años de experiencia",
+        "Certidumbre fiscal y jurídica"
+      ],
+      "modalidades": [
+        {
+          "icono": "web",
+          "texto": "Multimodal"
+        },
+        {
+          "icono": "plane",
+          "texto": "Aéreo"
+        },
+        {
+          "icono": "ship",
+          "texto": "Marítimo"
+        },
+        {
+          "icono": "truck",
+          "texto": "Terrestre"
+        }
+      ],
+      "etiquetas": {
+        "titulo": "Despacho aduanal: presencia en las principales aduanas",
+        "items": [
+          "Manzanillo",
+          "Veracruz",
+          "AICM",
+          "Querétaro",
+          "Guanajuato",
+          "Nuevo Laredo",
+          "Guadalajara",
+          "Altamira",
+          "Lázaro Cárdenas",
+          "Laredo, TX"
+        ]
+      },
+      "grupos": [
+        {
+          "titulo": "Asesoría y gestión",
+          "items": [
+            {
+              "nombre": "Asesoría y consultoría en comercio exterior",
+              "detalle": "Para reducir costos y gastos en el pago de contribuciones"
+            },
+            {
+              "nombre": "Auditoría e inspección a proveedores en origen",
+              "detalle": "Instalaciones, registro legal, procesos, calidad y bodegas, para una compra segura"
+            },
+            {
+              "nombre": "Desarrollo de negocios de importación",
+              "detalle": "Te guiamos paso a paso para importar desde Asia y cualquier parte del mundo"
+            },
+            {
+              "nombre": "Gestoría de trámites gubernamentales",
+              "detalle": "Autorizaciones, certificaciones, permisos, padrones y cupos"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aduanal-transporte",
+      "enIndice": false,
+      "titulo": "Transporte internacional de mercancías",
+      "subtitulo": "México · Estados Unidos · Canadá",
+      "icono": "globe",
+      "destacados": [
+        "Unidades con certificación C-TPAT",
+        "GPS y cuenta espejo"
+      ],
+      "items": [
+        {
+          "nombre": "Transporte terrestre",
+          "detalle": "México, Estados Unidos y Canadá; especialistas en la ruta",
+          "ilustracion": "semi"
+        },
+        {
+          "nombre": "Arrastre de contenedores marítimos",
+          "detalle": "Altamira, Lázaro Cárdenas, Manzanillo y Veracruz; modalidad sencillo y full",
+          "ilustracion": "contenedor"
+        },
+        {
+          "nombre": "Servicio consolidado (LTL)",
+          "detalle": "Nacional e internacional, aéreo, marítimo y terrestre, con rutas optimizadas"
+        },
+        {
+          "nombre": "Bróker americano",
+          "detalle": "Apoyo en tus importaciones y exportaciones en Estados Unidos"
+        },
+        {
+          "nombre": "Bodega en Laredo, TX",
+          "detalle": "Almacenaje y maniobras de carga y descarga"
+        },
+        {
+          "nombre": "Paquetería",
+          "detalle": "Paquetes pequeños de cualquier origen hasta su destino final"
+        },
+        {
+          "nombre": "Comercializadora",
+          "detalle": "Padrón general y padrón sectorial textil para el despacho de tu mercancía"
+        }
+      ]
     },
     {
       "id": "viajes",
@@ -537,7 +670,8 @@
           "detalle": ""
         }
       ],
-      "destacados": []
+      "destacados": [],
+      "ilustracion": "energia"
     }
   ]
 }
