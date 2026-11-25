@@ -1,0 +1,677 @@
+{
+  "empresa": {
+    "nombre": "PlastiCycle BJX",
+    "razonSocial": "PLASTICYCLE BJX S.A. DE C.V.",
+    "rfc": "PBJ2302176XA",
+    "lema": "メキシコ・バヒオ地域の産業ソリューション・インテグレーター。リサイクル、梱包資材、消耗品、物流、各種サービスをひとつの窓口でご提供します。",
+    "descripcion": "当社はバヒオ地域の産業界にソリューションを提供するために設立されたインテグレーター企業です。認定を受けた地元サプライヤーのネットワークと戦略的パートナーを通じて、貴社が現在多数の取引先から調達しているものを、ひとつの取引関係に集約します。",
+    "logoIcono": "assets/logo-icono.png",
+    "logo": "",
+    "titular": "工場に必要なものを、ひとつのサプライヤーで。"
+  },
+  "contacto": {
+    "whatsapp": "479 221 4882",
+    "telefono": "",
+    "email": "ceogroupmx@gmail.com",
+    "web": "",
+    "direcciones": [
+      {
+        "etiqueta": "事務所",
+        "direccion": "Calle Mayagüez 115, Col. El Palote, León, Gto. C.P. 37130"
+      },
+      {
+        "etiqueta": "パレット工場",
+        "direccion": "Calle Pino #79, Col. La Patiña, León, Gto. C.P. 37696"
+      }
+    ],
+    "horario": ""
+  },
+  "modelo": {
+    "titulo": "窓口はひとつ。ネットワーク全体が貴社のために。",
+    "intro": "工場の資材やサービスを調達するには、数十社ものサプライヤーの登録・評価・調整が必要です。インテグレーターである当社がその業務を代行します。貴社の購買部門は当社1社とやり取りするだけで、地域のメーカー、専門業者、パートナーとの調整はすべて当社が行います。",
+    "flujo": [
+      {
+        "titulo": "貴社",
+        "texto": "依頼も発注書も窓口もひとつ"
+      },
+      {
+        "titulo": "PlastiCycle BJX",
+        "texto": "見積・調整・納品・請求まで一括対応"
+      },
+      {
+        "titulo": "当社ネットワーク",
+        "texto": "認定地元サプライヤーと戦略的パートナー"
+      }
+    ],
+    "beneficios": [
+      {
+        "icono": "check",
+        "titulo": "サプライヤー登録は1社のみ",
+        "texto": "複数のサプライヤーを登録・評価・管理する手間が不要になります。"
+      },
+      {
+        "icono": "phone",
+        "titulo": "窓口の一本化",
+        "texto": "複数カテゴリーの見積・発注・納品を同じチームが対応します。"
+      },
+      {
+        "icono": "box",
+        "titulo": "書類の適正管理",
+        "texto": "適正な請求書と書類に基づく、正式な取引関係を築きます。"
+      },
+      {
+        "icono": "truck",
+        "titulo": "物流面のサポート",
+        "texto": "自社車両、定期的な集荷・配送、倉庫スペースを備えています。"
+      },
+      {
+        "icono": "leaf",
+        "titulo": "環境への取り組み",
+        "texto": "埋立ゼロのリサイクルと再利用プロセスで、貴社の企業イメージ向上に貢献します。"
+      },
+      {
+        "icono": "pin",
+        "titulo": "地元の力",
+        "texto": "バヒオ地域のサプライヤーならではの迅速な対応と近さ。"
+      }
+    ],
+    "aliados": {
+      "titulo": "地元企業との協業",
+      "texto": "地域の中小企業を当社ネットワークに迎え入れ、物流・財務・書類面で支援することで、大企業との取引を可能にしています。こうして、購買部門が求める正式な体制のもとで、地元の力と産業界をつないでいます。",
+      "cta": "地元サプライヤーの方へ：ネットワークにご参加ください"
+    }
+  },
+  "secciones": [
+    {
+      "id": "scrap",
+      "titulo": "スクラップ買取",
+      "subtitulo": "産業廃棄物を買い取ります",
+      "icono": "recycle",
+      "descripcion": "スクラップを責任を持って買い取ります。埋立処分は一切行いません。環境負荷や処分費用、マニフェスト手続きを回避しながら、当社の再利用プロセスを通じてリサイクル文化を育みます。",
+      "items": [
+        {
+          "nombre": "プラスチック",
+          "detalle": "",
+          "ilustracion": "plasticos"
+        },
+        {
+          "nombre": "繊維",
+          "detalle": "",
+          "ilustracion": "textiles"
+        },
+        {
+          "nombre": "木材",
+          "detalle": "",
+          "ilustracion": "madera"
+        },
+        {
+          "nombre": "金属",
+          "detalle": "",
+          "ilustracion": "metales"
+        }
+      ],
+      "destacados": [],
+      "pasos": [
+        "材料の査定",
+        "物流プランの策定",
+        "買取条件のご提案"
+      ],
+      "lista": {
+        "titulo": "貴社のメリット",
+        "items": [
+          "環境負荷を回避できます。",
+          "処分費用とマニフェスト手続きが不要になります。",
+          "材料をスクラップとして再分類せずに売買を行い、請求時は評価額のみを調整します。",
+          "再利用プロセスを通じたリサイクル文化の醸成。",
+          "企業イメージの向上につながります。"
+        ]
+      }
+    },
+    {
+      "id": "tarimas",
+      "titulo": "木製パレット・木箱・木枠",
+      "subtitulo": "オーダーメイド製造と買取",
+      "icono": "pallet",
+      "imagen": "assets/tarima.jpg",
+      "descripcion": "新材・再生材の木製パレットを、あらゆるサイズ・仕様で製造します。特注パレットの製造、回収、輸送、選別、再生パレットの売買と再利用において14年の実績があります。",
+      "destacados": [
+        "HT（熱処理）",
+        "燻蒸",
+        "切り欠き加工",
+        "通し番号",
+        "刻印",
+        "1日最大1,400枚"
+      ],
+      "grupos": [
+        {
+          "titulo": "製品",
+          "items": [
+            {
+              "nombre": "特注パレット",
+              "detalle": "新材・再生材、各種サイズ"
+            },
+            {
+              "nombre": "木箱・木枠",
+              "detalle": "オーダーメイド"
+            },
+            {
+              "nombre": "特殊梱包プロジェクト",
+              "detalle": "ダンネージ、木箱など。個別に設計"
+            },
+            {
+              "nombre": "再生パレットの売買",
+              "detalle": "回収・輸送・選別・再利用"
+            }
+          ]
+        },
+        {
+          "titulo": "材料",
+          "items": [
+            {
+              "nombre": "松材",
+              "detalle": "新材・再生材、特殊グレード"
+            },
+            {
+              "nombre": "部材",
+              "detalle": "ブロック、デッキボード、桁材、合板"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "planta",
+      "enIndice": false,
+      "titulo": "パレット工場",
+      "subtitulo": "生産能力・設備・認証",
+      "icono": "warehouse",
+      "imagen": "assets/tarimas-camion.jpg",
+      "destacados": [
+        "SEMARNAT認可：輸出用NOM-144植物検疫処理",
+        "熱処理認可およびHT-641刻印"
+      ],
+      "bloques": [
+        {
+          "titulo": "機械・設備",
+          "texto": "空気圧式釘打ち機、組立治具・作業台、丸鋸台、熱処理炉、燻蒸設備、打ち抜き機、フォークリフト、3.5～8トントラック、バン型・平台車両。"
+        },
+        {
+          "titulo": "人材と管理体制",
+          "texto": "製造業の現場に精通した訓練済みのスタッフ。施設内では燻蒸・消毒を定期的に管理しています。"
+        }
+      ],
+      "lista": {
+        "titulo": "選ばれる理由",
+        "items": [
+          "業界での豊富な経験。",
+          "高い生産能力と迅速な製造。",
+          "当日の定期配送と安全在庫。",
+          "安定した材料供給と調達。",
+          "財務基盤と適正な書類管理。",
+          "長年のお取引先からの信頼。"
+        ]
+      }
+    },
+    {
+      "id": "trapo",
+      "titulo": "工業用ウエス",
+      "subtitulo": "産業向け清掃用品",
+      "icono": "rag",
+      "descripcion": "保守、生産ライン、作業場向けのウエスや清掃用繊維製品を継続的に供給し、バヒオ地域全域へ定期配送します。",
+      "items": [
+        {
+          "nombre": "綿ウエス",
+          "detalle": "新品・洗浄済み"
+        },
+        {
+          "nombre": "Tシャツウエス",
+          "detalle": ""
+        },
+        {
+          "nombre": "シーツウエス",
+          "detalle": ""
+        },
+        {
+          "nombre": "綿平織りウエス",
+          "detalle": ""
+        },
+        {
+          "nombre": "マイクロファイバー",
+          "detalle": ""
+        },
+        {
+          "nombre": "パイル・工業用タオル",
+          "detalle": ""
+        },
+        {
+          "nombre": "綿くず（エストパ）",
+          "detalle": ""
+        },
+        {
+          "nombre": "バケツ入りウェットワイプ",
+          "detalle": "脱脂・除菌用"
+        }
+      ],
+      "destacados": [
+        "常時在庫",
+        "バヒオ地域へ1～2日で配送"
+      ],
+      "ilustracion": "trapo"
+    },
+    {
+      "id": "industrial",
+      "titulo": "梱包バンドと特注箱",
+      "subtitulo": "出荷用資材",
+      "icono": "box",
+      "descripcion": "製品の固定・出荷に必要な資材をご提供します。部品に合わせた特注箱を20個から製作でき、大量発注は必要ありません。",
+      "items": [
+        {
+          "nombre": "梱包バンド",
+          "detalle": "",
+          "ilustracion": "fleje"
+        },
+        {
+          "nombre": "特注箱",
+          "detalle": "最小ロット20個",
+          "ilustracion": "caja"
+        }
+      ],
+      "destacados": [
+        "特注箱：最小ロット20個"
+      ]
+    },
+    {
+      "id": "empaque",
+      "titulo": "梱包資材",
+      "subtitulo": "フィルム・袋・テープ",
+      "icono": "roll",
+      "descripcion": "フィルム、袋、テープなどの梱包消耗品を一度の発注にまとめられます。環境負荷を抑える再生材、または仕様に応じたバージン材からお選びいただけます。",
+      "items": [
+        {
+          "nombre": "ストレッチフィルム",
+          "detalle": "",
+          "ilustracion": "playo"
+        },
+        {
+          "nombre": "梱包用袋",
+          "detalle": "再生材・バージン材",
+          "ilustracion": "bolsaEmpaque"
+        },
+        {
+          "nombre": "ゴミ袋",
+          "detalle": "",
+          "ilustracion": "bolsaBasura"
+        },
+        {
+          "nombre": "梱包テープ",
+          "detalle": "",
+          "ilustracion": "cinta"
+        },
+        {
+          "nombre": "両面テープ",
+          "detalle": "",
+          "ilustracion": "dobleCara"
+        }
+      ],
+      "destacados": [
+        "再生材・バージン材をご用意"
+      ]
+    },
+    {
+      "id": "limpieza",
+      "titulo": "清掃用品",
+      "subtitulo": "清掃用品・安全用品",
+      "icono": "spray",
+      "descripcion": "工場向けの清掃用品と安全用品を、他の消耗品と同じ発注書でご注文いただけます。",
+      "items": [
+        {
+          "nombre": "清掃用品",
+          "detalle": "",
+          "ilustracion": "limpieza"
+        },
+        {
+          "nombre": "安全用品",
+          "detalle": "",
+          "ilustracion": "seguridad"
+        }
+      ],
+      "destacados": []
+    },
+    {
+      "id": "ecommerce",
+      "titulo": "ECサイト購買代行",
+      "subtitulo": "貴社に代わってオンラインで購入します",
+      "icono": "cart",
+      "descripcion": "社内手続きや業務上の制約により、Amazonなどのプラットフォームで直接購入できない企業様向けのサービスです。当社が注文・納品を行い、貴社宛てに請求書を発行します。売買取引にかかる付加価値税（IVA）のみを転嫁します。",
+      "items": [
+        {
+          "nombre": "Amazon",
+          "detalle": "",
+          "ilustracion": "amazon"
+        },
+        {
+          "nombre": "MercadoLibre",
+          "detalle": "",
+          "ilustracion": "mercadolibre"
+        },
+        {
+          "nombre": "その他のプラットフォーム",
+          "detalle": "",
+          "ilustracion": "otras"
+        }
+      ],
+      "destacados": [
+        "貴社宛てに請求書を発行",
+        "取引にかかる付加価値税のみ転嫁"
+      ],
+      "pasos": [
+        "当社が注文",
+        "貴社へ納品",
+        "貴社へ請求"
+      ],
+      "ilustracion": "ecommerce"
+    },
+    {
+      "id": "transporte",
+      "titulo": "地域輸送",
+      "subtitulo": "",
+      "icono": "truck",
+      "descripcion": "さまざまな積載量の車両で、地域内・長距離の輸送に対応します。集荷、定期配送、貸切輸送が可能です。",
+      "items": [
+        {
+          "nombre": "53フィート・フル",
+          "detalle": "ダブルトレーラー",
+          "ilustracion": "full"
+        },
+        {
+          "nombre": "セミトレーラー",
+          "detalle": "",
+          "ilustracion": "semi"
+        },
+        {
+          "nombre": "平台トレーラー",
+          "detalle": "",
+          "ilustracion": "plataforma"
+        },
+        {
+          "nombre": "単車トラック（Torton）",
+          "detalle": "",
+          "ilustracion": "torton"
+        },
+        {
+          "nombre": "ピックアップトラック",
+          "detalle": "",
+          "ilustracion": "pickup"
+        }
+      ],
+      "destacados": []
+    },
+    {
+      "id": "almacen",
+      "titulo": "倉庫スペースの賃貸",
+      "subtitulo": "グアナファト州レオンの物流倉庫",
+      "icono": "warehouse",
+      "descripcion": "専門の物流事業者との提携により、あらゆる規模の企業様に倉庫スペースと物流サービスをご提供します。",
+      "items": [
+        {
+          "nombre": "保管",
+          "detalle": "温度管理と専用ラック"
+        },
+        {
+          "nombre": "保税倉庫",
+          "detalle": "輸入貨物を最長24か月保管"
+        },
+        {
+          "nombre": "付加価値サービス",
+          "detalle": "パレット積み、バンド掛け、梱包"
+        },
+        {
+          "nombre": "在庫管理",
+          "detalle": ""
+        }
+      ],
+      "destacados": [],
+      "ilustracion": "almacen"
+    },
+    {
+      "id": "aduanal",
+      "titulo": "通関・貿易サービス",
+      "subtitulo": "スムーズな輸出入",
+      "icono": "globe",
+      "descripcion": "20年以上の実績を持つ貿易サービス会社との提携により、滞りのない物流と、輸出入における税務・法務上の確実性をご提供します。貴社は日常業務に専念できます。",
+      "destacados": [
+        "自社通関ライセンス",
+        "20年以上の実績",
+        "税務・法務上の確実性"
+      ],
+      "modalidades": [
+        {
+          "icono": "web",
+          "texto": "複合輸送"
+        },
+        {
+          "icono": "plane",
+          "texto": "航空"
+        },
+        {
+          "icono": "ship",
+          "texto": "海上"
+        },
+        {
+          "icono": "truck",
+          "texto": "陸上"
+        }
+      ],
+      "etiquetas": {
+        "titulo": "通関：メキシコ主要税関に拠点",
+        "items": [
+          "Manzanillo",
+          "Veracruz",
+          "メキシコシティ国際空港（AICM）",
+          "Querétaro",
+          "Guanajuato",
+          "Nuevo Laredo",
+          "Guadalajara",
+          "Altamira",
+          "Lázaro Cárdenas",
+          "Laredo, TX"
+        ]
+      },
+      "grupos": [
+        {
+          "titulo": "コンサルティング・手続き代行",
+          "items": [
+            {
+              "nombre": "貿易コンサルティング",
+              "detalle": "関税・税負担の軽減"
+            },
+            {
+              "nombre": "原産地でのサプライヤー監査・検査",
+              "detalle": "施設、法的登録、工程、品質、倉庫を確認し、安全な取引を実現"
+            },
+            {
+              "nombre": "輸入ビジネス立ち上げ支援",
+              "detalle": "アジアをはじめ世界各地からの輸入を段階的にサポート"
+            },
+            {
+              "nombre": "官公庁手続き代行",
+              "detalle": "認可、認証、許可、輸入者登録、割当"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aduanal-transporte",
+      "enIndice": false,
+      "titulo": "国際貨物輸送",
+      "subtitulo": "メキシコ・米国・カナダ",
+      "icono": "globe",
+      "destacados": [
+        "C-TPAT認証車両",
+        "GPS・ミラーアカウントで追跡"
+      ],
+      "items": [
+        {
+          "nombre": "陸上輸送",
+          "detalle": "メキシコ・米国・カナダ間のルートに精通",
+          "ilustracion": "semi"
+        },
+        {
+          "nombre": "海上コンテナのドレージ",
+          "detalle": "アルタミラ、ラサロ・カルデナス、マンサニージョ、ベラクルス。シングル・ダブル対応",
+          "ilustracion": "contenedor"
+        },
+        {
+          "nombre": "混載輸送（LTL）",
+          "detalle": "国内・国際、航空・海上・陸上。最適化されたルート"
+        },
+        {
+          "nombre": "米国通関業者",
+          "detalle": "米国での輸出入をサポート"
+        },
+        {
+          "nombre": "テキサス州ラレドの倉庫",
+          "detalle": "保管および荷役作業"
+        },
+        {
+          "nombre": "小口配送",
+          "detalle": "世界各地から最終目的地まで小口貨物を配送"
+        },
+        {
+          "nombre": "商社機能",
+          "detalle": "一般および繊維部門の輸入者登録で通関に対応"
+        }
+      ]
+    },
+    {
+      "id": "viajes",
+      "titulo": "出張・イベント手配",
+      "subtitulo": "法人向け宿泊手配とイベント企画",
+      "icono": "plane",
+      "imagen": "assets/eventos.jpg",
+      "descripcion": "ビジネストラベル：企業、作業チーム、イベント主催者向けに、メキシコ全国で宿泊手配を一括管理します。",
+      "destacados": [
+        "時間とコストの削減",
+        "提携による特別料金",
+        "全国対応",
+        "ホテル業界で10年以上の実績"
+      ],
+      "grupos": [
+        {
+          "titulo": "サービス",
+          "items": [
+            {
+              "nombre": "宿泊",
+              "detalle": "イベントの内容に合わせたホテル選定"
+            },
+            {
+              "nombre": "イベント",
+              "detalle": "会議室・会場の選定と運営。企画から実施、フォローアップまで"
+            },
+            {
+              "nombre": "交渉",
+              "detalle": "ホテルや業者と交渉し、より良い料金・条件・空き状況を確保"
+            },
+            {
+              "nombre": "きめ細かな対応",
+              "detalle": "ご要望やご希望を丁寧に伺います"
+            }
+          ]
+        }
+      ],
+      "lista": {
+        "titulo": "宿泊手配の対象",
+        "items": [
+          "会議・コンベンション",
+          "見本市・展示会",
+          "企業イベント",
+          "他都市での短期プロジェクト",
+          "団体出張"
+        ]
+      }
+    },
+    {
+      "id": "agua",
+      "titulo": "水処理",
+      "subtitulo": "処理施設・設備・サービス",
+      "icono": "drop",
+      "descripcion": "処理施設の運転・保守と設備・消耗品の供給を行い、貴社が生産に専念できるようサポートします。",
+      "destacados": [
+        "生物処理・物理化学処理の排水処理施設",
+        "12時間・24時間の運転プラン"
+      ],
+      "grupos": [
+        {
+          "titulo": "サービス",
+          "items": [
+            {
+              "nombre": "排水処理施設の運転",
+              "detalle": "生物処理・物理化学処理、12時間・24時間プラン"
+            },
+            {
+              "nombre": "排水処理施設の保守",
+              "detalle": "予防保全・事後保全"
+            },
+            {
+              "nombre": "薬品処理",
+              "detalle": "冷却塔・ボイラー向け"
+            },
+            {
+              "nombre": "設備の設置",
+              "detalle": ""
+            },
+            {
+              "nombre": "現地での物理化学分析",
+              "detalle": ""
+            },
+            {
+              "nombre": "配管・水回りの改修",
+              "detalle": ""
+            }
+          ]
+        },
+        {
+          "titulo": "設備・消耗品",
+          "items": [
+            {
+              "nombre": "逆浸透（RO）",
+              "detalle": "膜および装置"
+            },
+            {
+              "nombre": "軟水化装置",
+              "detalle": "処理装置用バルブも対応"
+            },
+            {
+              "nombre": "圧力タンク・ディスクフィルター",
+              "detalle": ""
+            },
+            {
+              "nombre": "ろ材",
+              "detalle": "活性炭、ケイ砂、砂利、アンスラサイト、ガーネット、グリーンサンド、イオン交換樹脂"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "energia",
+      "titulo": "電気工事・太陽光パネル",
+      "subtitulo": "",
+      "icono": "sun",
+      "descripcion": "工場の電気工事と太陽光パネルシステムを、同じ取引関係の中でご提供します。",
+      "items": [
+        {
+          "nombre": "電気工事",
+          "detalle": ""
+        },
+        {
+          "nombre": "太陽光パネル",
+          "detalle": ""
+        }
+      ],
+      "destacados": [],
+      "ilustracion": "energia"
+    }
+  ]
+}

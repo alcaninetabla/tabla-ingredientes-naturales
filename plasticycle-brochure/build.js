@@ -1,6 +1,7 @@
 // Genera el brochure interactivo de PlastiCycle (HTML -> PDF con Chromium/Playwright).
 // Uso:  node build.js            -> PDF final (oculta campos vacíos)
 //       node build.js --borrador -> PDF con marcas de "información pendiente"
+//       node build.js --en | --ja  -> versión en inglés / japonés
 const fs = require('fs');
 const path = require('path');
 const { chromium } = require('playwright');
@@ -8,12 +9,12 @@ const ilusBase = require('./ilustraciones');
 
 const DIR = __dirname;
 const BORRADOR = process.argv.includes('--borrador');
-const EN = process.argv.includes('--en');
-const data = JSON.parse(fs.readFileSync(path.join(DIR, EN ? 'content.en.json' : 'content.json'), 'utf8'));
+const LANG = process.argv.includes('--en') ? 'en' : process.argv.includes('--ja') ? 'ja' : 'es';
+const data = JSON.parse(fs.readFileSync(path.join(DIR, LANG === 'es' ? 'content.json' : `content.${LANG}.json`), 'utf8'));
 
 // Textos fijos de la interfaz por idioma
-const T = EN
-  ? {
+const TEXTOS = {
+  en: {
       lang: 'en', kicker: 'Integrator model', pend: 'Pending information', hola: (e, s) => `Hello ${e}, I'd like a quote for: ${s}`, cotiz: 'Quote request: ',
       tel: 'Phone', mail: 'Email', web: 'Website', horario: 'Hours', indice: 'Contents', ant: 'Previous', sig: 'Next',
       lema: 'Company tagline', modelo: 'Discover our model', verServ: 'View services',
@@ -23,8 +24,19 @@ const T = EN
       cotizar: 'Request a quote', hablemos: "Let's talk about your project", volver: 'Back to contents', rfc: 'Tax ID (RFC)',
       titulo: 'Services brochure', pags: 'pages',
       ilus: { Pedido: 'Order', Entrega: 'Delivery', 'Tu empresa': 'Your company', 'y más…': 'and more…' },
-    }
-  : {
+    },
+  ja: {
+      lang: 'ja', kicker: 'インテグレーター・モデル', pend: '情報未入力', hola: (e, s) => `${e} 様　見積もりを依頼したいです：${s}`, cotiz: '見積依頼：',
+      tel: '電話', mail: 'メール', web: 'ウェブサイト', horario: '営業時間', indice: '目次', ant: '前へ', sig: '次へ',
+      lema: 'キャッチフレーズ', modelo: '事業モデルを見る', verServ: 'サービス一覧',
+      sumarse: (e) => `${e} 様　地元のサプライヤーです。ネットワークへの参加を希望します。`,
+      gana: '購買部門にとってのメリット', servicios: 'サービス一覧', toca: '各サービスをタップすると該当ページへ移動します。',
+      descEmp: '会社概要', contacto: 'お問い合わせ', descServ: 'サービス説明', prods: '製品・サービス内容',
+      cotizar: '見積もりを依頼する', hablemos: 'お気軽にご相談ください', volver: '目次に戻る', rfc: '納税者番号（RFC）',
+      titulo: 'サービス案内', pags: 'ページ',
+      ilus: { Pedido: '注文', Entrega: '配送', 'Tu empresa': '貴社', 'y más…': 'その他…', FULL: 'フル' },
+    },
+  es: {
       lang: 'es', kicker: 'Modelo integrador', pend: 'Información pendiente', hola: (e, s) => `Hola ${e}, me interesa cotizar: ${s}`, cotiz: 'Cotización: ',
       tel: 'Teléfono', mail: 'Correo', web: 'Sitio web', horario: 'Horario', indice: 'Índice', ant: 'Anterior', sig: 'Siguiente',
       lema: 'Lema / frase de la empresa', modelo: 'Conoce nuestro modelo', verServ: 'Ver servicios',
@@ -33,7 +45,9 @@ const T = EN
       descEmp: 'Descripción breve de la empresa (quiénes somos)', contacto: 'Contáctanos', descServ: 'Descripción del servicio',
       prods: 'Productos / variantes del servicio', cotizar: 'Solicitar cotización', hablemos: 'Hablemos de tu proyecto',
       volver: 'Volver al índice', rfc: 'RFC', titulo: 'Brochure de servicios', pags: 'páginas', ilus: {},
-    };
+    },
+};
+const T = TEXTOS[LANG];
 const { empresa, contacto, secciones, modelo } = data;
 
 const esc = (s = '') =>
@@ -253,13 +267,25 @@ pages.push(`<section class="page contact" id="contacto">
   ${footer(total, secciones[secciones.length - 1].id, null)}
 </section>`);
 
+// Japonés: Noto Sans JP embebida (licencia OFL en assets/fonts)
+function cssJa() {
+  const f = (w) => `@font-face{font-family:'Noto Sans JP';font-weight:${w};src:url(data:font/woff2;base64,${fs
+    .readFileSync(path.join(DIR, `assets/fonts/noto-sans-jp-japanese-${w}-normal.woff2`))
+    .toString('base64')}) format('woff2');}`;
+  return `${f(400)}${f(700)}
+  html,body{font-family:Inter,'Noto Sans JP','IPAPGothic',sans-serif;line-break:strict;word-break:normal;}
+  .desc,.intro,.about,.blk p,.card p,.ben p,.ally p{line-height:1.75;}
+  .gt,.crow small,.kicker{letter-spacing:.5px;}
+  h1,h2,h3,h4,b,.lema,.step,.badge,.mod{word-break:auto-phrase;}`;
+}
+
 const html = `<!doctype html><html lang="${T.lang}"><head><meta charset="utf-8">
 <title>${esc(empresa.nombre)} – ${T.titulo}</title>
-<style>${fs.readFileSync(path.join(DIR, 'styles.css'), 'utf8')}</style></head>
+<style>${fs.readFileSync(path.join(DIR, 'styles.css'), 'utf8')}${LANG === 'ja' ? cssJa() : ''}</style></head>
 <body>${pages.join('\n')}</body></html>`;
 
 (async () => {
-  const outName = (BORRADOR ? 'plasticycle-brochure-borrador' : 'plasticycle-brochure') + (EN ? '-en' : '');
+  const outName = (BORRADOR ? 'plasticycle-brochure-borrador' : 'plasticycle-brochure') + (LANG === 'es' ? '' : `-${LANG}`);
   fs.writeFileSync(path.join(DIR, `${outName}.html`), html);
   const browser = await chromium.launch();
   const page = await browser.newPage();
